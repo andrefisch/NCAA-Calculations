@@ -1,19 +1,19 @@
 
 # coding: utf-8
 
-# In[68]:
+# In[99]:
 
 import pandas
 import operator
 
 
-# In[69]:
+# In[100]:
 
 # Get the information and make the dictionary
 html = pandas.read_html("http://escrimeresults.com/NCAA/ncaa2016.html")
 
 
-# In[76]:
+# In[101]:
 
 # Read schools into dictionary
 # works correctly #############################################################
@@ -48,7 +48,7 @@ for p in schools:
 #    print (key, value)
 
 
-# In[78]:
+# In[102]:
 
 # Import the dictionary file
 schoolConversion = {}
@@ -69,14 +69,15 @@ for i in range(1, len(html[18])):
     else:
         boutsRemain[temp] = [html[18].iloc[i, totalColumn], html[18].iloc[i, remainColumn]]
 boutsRemain["Columbia/Barnard"][1] = 10
-boutsRemain["Ohio State University"][1] = 10
+boutsRemain["Ohio State University"][1] = 6
+boutsRemain["Princeton University"][1] = 10
 for key, value in boutsRemain.items():
     print (key, value)
 
 
-# In[74]:
+# In[103]:
 
-schoolToCheck = "COLU"
+schoolToCheck = "PRIN"
 firstPlace = ""
 secondPlace = ""
 xthPlace = ""
@@ -116,11 +117,27 @@ if (xthPlace == 1):
         need = (int(boutsRemain[secondPlace][1]) + int(boutsRemain[secondPlace][0])) - int(boutsRemain[firstPlace][0])
         remain = int(boutsRemain[firstPlace][1])
         percent = need / remain * 100.0
-        print (firstPlace + " is in first place, ahead of " + secondPlace + " by " + str(diff) + " bouts and needs to win " + str(need) + " of their remaining " + str(remain) + " bouts to clinch. That's " + str(percent) + "% of their remaining bouts.")
+        print (firstPlace + " is in first place, ahead of " + secondPlace + " by " + str(diff) + " bouts and needs to win " + str(need) + " of their " + str(remain) + " remaining bouts to clinch. That's " + str(percent) + "% of their remaining bouts.")
 # If we are not in first place
 else:
-    diff = int(boutsRemain[firstPlace][0]) - int(boutsRemain[secondPlace][0])
-    print (str(schoolConversion[schoolToCheck]) + " is in " + str(xthPlace) + " place and is " + str(diff) + " bouts behind " + firstPlace) 
+    diff = int(boutsRemain[firstPlace][0]) - int(boutsRemain[schoolConversion[schoolToCheck]][0])
+    #weNeed = (int(boutsRemain[schoolConversion[schoolToCheck]][1]) + int(boutsRemain[schoolConversion[schoolToCheck]][0])) - int(boutsRemain[firstPlace][0])
+    weRemain = int(boutsRemain[schoolConversion[schoolToCheck]][1])
+    wePercent = diff / weRemain * 100.0
+    theyNeed = 1 + (int(boutsRemain[secondPlace][1]) + int(boutsRemain[secondPlace][0])) - int(boutsRemain[firstPlace][0])
+    theyRemain = int(boutsRemain[firstPlace][1])
+    theyPercent = theyNeed / theyRemain * 100.0
+    # OSU is in second place and needs to win 7 of their 10 remaining bouts to catch Columbia/Barnard.  
+    # That's 70% of their remaining bouts.  If Columbia/Barnard wins 3 of their ten remaining bouts, 
+    # OSU will be eliminated.
+    if (diff > int(boutsRemain[schoolConversion[schoolToCheck]][1])):
+        print (str(schoolConversion[schoolToCheck]) + " is in " + str(xthPlace) + " place and is " + str(diff) + " bouts behind " + firstPlace)
+        print ("Because " + schoolToCheck + " needs to win " + str(diff) + " bouts to catch " + firstPlace + " and only has " + str(weRemain) + " bouts left to fence,")
+        print (schoolToCheck + " cannot catch " + firstPlace)
+    else:
+        print (str(schoolConversion[schoolToCheck]) + " is in " + str(xthPlace) + " place and is " + str(diff) + " bouts behind " + firstPlace)
+        print (schoolToCheck + " needs to win " + str(diff) + " of their " + str(weRemain) + " remaining bouts to catch " + firstPlace + ". That's " + str(wePercent) + "% of their remaining bouts")  
+        print ("If " + firstPlace + " wins " + str(theyNeed) + " of their remaining " + str(theyRemain) + " bouts (" + str(theyPercent) + "%) " + schoolToCheck + " will be eliminated")
 
 
 # In[ ]:

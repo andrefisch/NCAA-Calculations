@@ -1,6 +1,7 @@
 COLU;Columbia/Barnard
 OSU;Ohio State University
-STJ;Princeton University
+PRIN;Princeton University
+STJ;St. John's University
 ND;Notre Dame
 PSU;Pennsylvania State University
 HARV;Harvard University
@@ -25,4 +26,4 @@ LAWR;Lawrence University
 MIT;M.I.T.
 FDU;Farleigh Dickinson University
 UDM;University of Detroit Mercy
-VAS;Vassar
+VASS;Vassar
