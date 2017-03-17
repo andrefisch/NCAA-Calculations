@@ -6,13 +6,27 @@
 <body>
     <table>
         <tr>
+            <th>Current Leader</th>
+            <th>Total Wins</th>
+            <th>Bouts Remaining</th>
+            <th>Bouts Needed to Clinch</th>
+            <th>% Bouts Needed to Clinch</th>
+        </tr>
+            <tr>
+                <td>{{boutsRemain[0][0]}}</td>
+                <td>{{boutsRemain[0][1][0]}}</td>
+                <td>{{boutsRemain[0][1][1]}}</td>
+                <td>{{boutsRemain[0][1][2]}}</td>
+                <td>{{boutsRemain[0][1][3]}}</td>
+            </tr>
+        <tr>
             <th>School</th>
             <th>Total Wins</th>
             <th>Bouts Remaining</th>
-            <th>Bouts To Clinch / Bouts Behind Leader</th>
-            <th>% of Bouts Needed to Clinch / Catch Leader</th>
+            <th>Bouts Behind Leader</th>
+            <th>% Wins Needed to Catch Leader</th>
         </tr>
-        {% for school in boutsRemain %}
+        {% for school in boutsRemain[1:] %}
             <tr>
                 <td>{{school[0]}}</td>
                 <td>{{school[1][0]}}</td>
