@@ -40,7 +40,7 @@ header h1.logo:hover {
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 500px;
 }
 
 th, td {
