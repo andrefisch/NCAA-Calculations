@@ -139,8 +139,3 @@ else:
         print (schoolToCheck + " needs to win " + str(diff) + " of their " + str(weRemain) + " remaining bouts to catch " + firstPlace + ". That's " + str(wePercent) + "% of their remaining bouts")  
         print ("If " + firstPlace + " wins " + str(theyNeed) + " of their remaining " + str(theyRemain) + " bouts (" + str(theyPercent) + "%) " + schoolToCheck + " will be eliminated")
 
-
-# In[ ]:
-
-
-
