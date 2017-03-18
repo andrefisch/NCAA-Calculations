@@ -5,11 +5,11 @@
         <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
     </head>
     <body>
-        <img src="../static/images/banner 3.png" width="1063" height="266" alt=""/>
+        <img src="{{url_for('static', filename='images/banner 3.png')}}" width="1063" height="266" align="middle" alt=""/>
         <header>
             <div class="container">
-              <h1 class="logo">&nbsp;</h1>
-              <strong><nav>
+                <h1 class="logo">&nbsp;</h1>
+                <strong><nav>
                     <ul class="menu">
                         <li><a href="{{ url_for('home') }}">Home</a></li>
                         <li><a href="{{ url_for('about') }}">About</a></li>

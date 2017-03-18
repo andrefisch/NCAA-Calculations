@@ -1,29 +1,29 @@
-COLU;Columbia/Barnard
-OSU;Ohio State University
-PRIN;Princeton University
-STJ;St. John's University
-ND;Notre Dame
-PSU;Pennsylvania State University
-HARV;Harvard University
-PENN;Pennsylvania, University of
-DUKE;Duke University
-NJIT;NJ Institute of Technology
-STAN;Stanford University
-NW;Northwestern University
-NYU;New York University
-WAYN;Wayne State University
-CORN;Cornell University
-TEMP;Temple University
-YALE;Yale University
-UCSD;U.C. San Diego
-SACR;Sacred Heart University
-BC;Boston College
-UNC;UNC, Chapel Hill
-USAF;U.S. Air Force Academy
-BROW;Brown University
-UIW;University of the Incarnate Word
-LAWR;Lawrence University
-MIT;M.I.T.
-FDU;Farleigh Dickinson University
-UDM;University of Detroit Mercy
-VASS;Vassar
+Columbia/Barnard;COLU
+Ohio State University;OSU
+Princeton University;PRIN
+St. John's University;STJ
+Notre Dame;ND
+Pennsylvania State University;PSU
+Harvard University;HARV
+Pennsylvania, University of;PENN
+Duke University;DUKE
+NJ Institute of Technology;NJIT
+Stanford University;STAN
+Northwestern University;NW
+New York University;NYU
+Wayne State University;WAYN
+Cornell University;CORN
+Temple University;TEMP
+Yale University;YALE
+U.C. San Diego;UCSD
+Sacred Heart University;SACR
+Boston College;BC
+UNC, Chapel Hill;UNC
+U.S. Air Force Academy;USAF
+Brown University;BROW
+University of the Incarnate Word;UIW
+Lawrence University;LAWR
+M.I.T.;MIT
+Farleigh Dickinson University;FDU
+University of Detroit Mercy;UDM
+Vassar;VASS

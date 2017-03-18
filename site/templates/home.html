@@ -1,7 +1,44 @@
 {%extends "layout.html"%}
 {%block content%}
-<div class="home">
-    <h1>My Homepage</h1>
-    <p>This is a test website</p>
+<div class="about">
+    <h1>Win Information By School</h1>
 </div>
+<body>
+    <table>
+        <tr>
+            <th>Logo</th>
+            <th>Current Leader</th>
+            <th>Total Wins</th>
+            <th>Bouts Remaining</th>
+            <th>Bouts Needed to Clinch</th>
+            <th>% Bouts Needed to Clinch</th>
+        </tr>
+        <tr>
+            <td><img src="../static/images/{{boutsRemain[0][1][4]}}" alt="" style="width:auto; height:50px;"></td>
+            <td>{{boutsRemain[0][0]}}</td>
+            <td>{{boutsRemain[0][1][0]}}</td>
+            <td>{{boutsRemain[0][1][1]}}</td>
+            <td>{{boutsRemain[0][1][2]}}</td>
+            <td>{{boutsRemain[0][1][3]}}</td>
+        </tr>
+        <tr>
+            <th>Logo</th>
+            <th>School</th>
+            <th>Total Wins</th>
+            <th>Bouts Remaining</th>
+            <th>Bouts Behind Leader</th>
+            <th>% Wins Needed to Catch Leader</th>
+        </tr>
+        {% for school in boutsRemain[1:] %}
+            <tr>
+                <td><img src="../static/images/{{school[1][4]}}" alt="" style="width:auto; height:50px;"></td>
+                <td>{{school[0]}}</td>
+                <td>{{school[1][0]}}</td>
+                <td>{{school[1][1]}}</td>
+                <td>{{school[1][2]}}</td>
+                <td>{{school[1][3]}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body> 
 {%endblock%}
