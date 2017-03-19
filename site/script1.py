@@ -18,7 +18,7 @@ def home():
     # Create bouts remain dictionary
     boutsRemain = {}
     # go through list of schools at bottom of page
-    for i in range(1, len(html[18])):
+    for i in range(1, len(html[-1])):
         schoolColumn = 2
         totalColumn = 3
         remainColumn = 4
@@ -27,14 +27,16 @@ def home():
         # 1: bouts remaining
         # 2: bouts to clinch/bouts behind
         # 3: % of bouts needed to clinch/catch leader
+        # 4: schoolcode
         boutsRemain[temp] = [int(html[18].iloc[i, totalColumn]), int(html[18].iloc[i, remainColumn]), 0, 0.0, ""]
+      
     # ADD A LITTLE FAKE DATA FOR TESTING
-    # boutsRemain["Columbia/Barnard"][1] = 10
+    boutsRemain["Columbia/Barnard"][1] = len(html[-1])
     # boutsRemain["Ohio State University"][1] = 10
-    # boutsRemain["Princeton University"][1] = 20
+    # boutsRemain["Princeton University"][1] = 4
     # boutsRemain["St. John's University"][1] = 14
     # boutsRemain["Notre Dame"][1] = 20
-    boutsRemain["Lawrence University"][1] = 200
+  #  boutsRemain["Lawrence University"][1] = 200
     # sort the bouts and store information in an array
     schools = len(boutsRemain)
     boutsRemain = sorted(boutsRemain.items(), key=lambda i: i[1][0], reverse=True)
