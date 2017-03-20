@@ -1,8 +1,11 @@
+beautifulsoup4==4.5.3
 click==6.7
 Flask==0.12
 gunicorn==19.7.0
+html5lib==0.999
 itsdangerous==0.24
 Jinja2==2.9.5
+lxml==3.7.3
 MarkupSafe==1.0
 numpy==1.12.1
 pandas==0.19.2
