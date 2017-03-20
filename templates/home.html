@@ -3,6 +3,7 @@
 <body>
     <table class="center">
         <tr>           
+            <th>Current Place</th>
             <th></th>
             <th>Current Leader</th>
             <th>Total Wins</th>
@@ -11,6 +12,7 @@
             <th>% Bouts Needed to Clinch</th>
         </tr>
         <tr>
+            <td>1.</td>
             <td><img src="../static/images/{{boutsRemain[0][1][4]}}" alt="" style="width:auto; height:50px;"></td>
             <td>{{boutsRemain[0][0]}}</td>
             <td>{{boutsRemain[0][1][0]}}</td>
@@ -23,6 +25,7 @@
             <td>{{boutsRemain[0][1][3]}}</td>
         </tr>
         <tr>
+            <th>Current Place</th>
             <th></th>
             <th>School</th>
             <th>Total Wins</th>
@@ -32,6 +35,7 @@
         </tr>
         {% for school in boutsRemain[1:] %}
             <tr>
+                <td>{{school[1][5]}}.</td>
                 <td><img src="../static/images/{{school[1][4]}}" alt="" style="width:auto; height:50px;"></td>
                 <td>{{school[0]}}</td>
                 <td>{{school[1][0]}}</td>

@@ -36,7 +36,9 @@ def home():
             # 1: bouts remaining
             # 2: bouts to clinch/bouts behind
             # 3: % of bouts needed to clinch/catch leader
-            boutsRemain[temp] = [int(html[-2].iloc[i, totalColumn]), int(html[-2].iloc[i, remainColumn]), 0, 0.0, ""]
+            # 4: name of png for school logo
+            # 5: current ranking
+            boutsRemain[temp] = [int(html[-2].iloc[i, totalColumn]), int(html[-2].iloc[i, remainColumn]), 0, 0.0, "", 0]
         # ADD A LITTLE FAKE DATA FOR TESTING
         # {{{
         # boutsRemain["Columbia/Barnard"][0] = 163
@@ -54,6 +56,8 @@ def home():
         for i in range (0, schools):
             # make sure references to image files are part of array
             boutsRemain[i][1][4] = schoolConversion[boutsRemain[i][0]] + ".png"
+            # what is the current school's place
+            boutsRemain[i][1][5] = i + 1
         # find win differences in wins for teams and fill out array information 
         isOver = True
         for i in range (1, schools):
