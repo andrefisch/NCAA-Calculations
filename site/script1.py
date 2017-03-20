@@ -14,7 +14,12 @@ with open('static/text/schoolDict.txt') as f:
 @app.route('/')
 def home():
     # Get the information and make the dictionary
+    # 2016 final version
+    # html = pandas.read_html("http://escrimeresults.com/NCAA/ncaa2016.html")
+    # ARCHIVED VERSION WORKS
     html = pandas.read_html("http://web.archive.org/web/20160325002832/http://www.escrimeresults.com/NCAA/NCAA2016.html")
+    # EMPTY DOESNT WORK
+    # html = pandas.read_html("http://web.archive.org/web/20160324121938/http://www.escrimeresults.com/NCAA/NCAA2016.html")
     # Create bouts remain dictionary
     boutsRemain = {}
     # go through list of schools at bottom of page
@@ -29,7 +34,7 @@ def home():
         # 3: % of bouts needed to clinch/catch leader
         boutsRemain[temp] = [int(html[-2].iloc[i, totalColumn]), int(html[-2].iloc[i, remainColumn]), 0, 0.0, ""]
     # ADD A LITTLE FAKE DATA FOR TESTING
-    # boutsRemain["Columbia/Barnard"][1] = 10
+    # boutsRemain["Columbia/Barnard"][0] = 163
     # boutsRemain["Ohio State University"][1] = 10
     # boutsRemain["Princeton University"][1] = 20
     # boutsRemain["St. John's University"][1] = 14

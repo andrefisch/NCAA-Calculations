@@ -26,4 +26,4 @@ Lawrence University;LAWR
 M.I.T.;MIT
 Farleigh Dickinson University;FDU
 University of Detroit Mercy;UDM
-Vassar;VASS
+Vassar College;VASS
