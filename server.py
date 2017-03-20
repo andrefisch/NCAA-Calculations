@@ -18,9 +18,9 @@ with open("./static/text/schoolDict.txt") as f:
 def home():
     # Get the information and make the dictionary
     # 2016 final version
-    html = pandas.read_html("http://escrimeresults.com/NCAA/ncaa2016.html")
+    # html = pandas.read_html("http://escrimeresults.com/NCAA/ncaa2016.html")
     # ARCHIVED VERSION WORKS
-    # html = pandas.read_html("http://web.archive.org/web/20160325002832/http://www.escrimeresults.com/NCAA/NCAA2016.html")
+    html = pandas.read_html("http://web.archive.org/web/20160325002832/http://www.escrimeresults.com/NCAA/NCAA2016.html")
     # EMPTY DOESNT WORK
     # html = pandas.read_html("http://web.archive.org/web/20160324121938/http://www.escrimeresults.com/NCAA/NCAA2016.html")
     # Create bouts remain dictionary
