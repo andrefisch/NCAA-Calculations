@@ -14,29 +14,27 @@ with open('static/text/schoolDict.txt') as f:
 @app.route('/')
 def home():
     # Get the information and make the dictionary
-    html = pandas.read_html("http://escrimeresults.com/NCAA/ncaa2016.html")
+    html = pandas.read_html("http://web.archive.org/web/20160325002832/http://www.escrimeresults.com/NCAA/NCAA2016.html")
     # Create bouts remain dictionary
     boutsRemain = {}
     # go through list of schools at bottom of page
-    for i in range(1, len(html[-1])):
+    for i in range(1, len(html[-2])):
         schoolColumn = 2
         totalColumn = 3
         remainColumn = 4
-        temp = html[18].iloc[i, schoolColumn].strip('\n')
+        temp = html[-2].iloc[i, schoolColumn].strip('\n')
         # 0: total wins
         # 1: bouts remaining
         # 2: bouts to clinch/bouts behind
         # 3: % of bouts needed to clinch/catch leader
-        # 4: schoolcode
-        boutsRemain[temp] = [int(html[18].iloc[i, totalColumn]), int(html[18].iloc[i, remainColumn]), 0, 0.0, ""]
-      
+        boutsRemain[temp] = [int(html[-2].iloc[i, totalColumn]), int(html[-2].iloc[i, remainColumn]), 0, 0.0, ""]
     # ADD A LITTLE FAKE DATA FOR TESTING
-    boutsRemain["Columbia/Barnard"][1] = len(html[-1])
+    # boutsRemain["Columbia/Barnard"][1] = 10
     # boutsRemain["Ohio State University"][1] = 10
-    # boutsRemain["Princeton University"][1] = 4
+    # boutsRemain["Princeton University"][1] = 20
     # boutsRemain["St. John's University"][1] = 14
     # boutsRemain["Notre Dame"][1] = 20
-  #  boutsRemain["Lawrence University"][1] = 200
+    # boutsRemain["Lawrence University"][1] = 200
     # sort the bouts and store information in an array
     schools = len(boutsRemain)
     boutsRemain = sorted(boutsRemain.items(), key=lambda i: i[1][0], reverse=True)
@@ -55,10 +53,11 @@ def home():
             # bouts needed to clinch for top school becomes ith place's win total + ith place's remaining bouts - 1st place total bouts
             need = 1 + int(boutsRemain[i][1][0]) + int(boutsRemain[i][1][1]) - int(boutsRemain[0][1][0])
             remain = int(boutsRemain[0][1][1])
-            boutsRemain[0][1][2] = need
             if (remain > 0):
+                boutsRemain[0][1][2] = need
                 boutsRemain[0][1][3] = str(round(need / remain * 100.0, 1)) + "%"
             else:
+                boutsRemain[0][1][2] = "DONE"
                 boutsRemain[0][1][3] = "DONE"
             break
     if (isOver):
