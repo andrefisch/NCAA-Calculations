@@ -18,9 +18,9 @@ with open("./static/text/schoolDict.txt") as f:
 def home():
     # Get the information and make the dictionary
     # 2016 final version
-    # html = pandas.read_html("http://escrimeresults.com/NCAA/ncaa2016.html")
+    html = pandas.read_html("http://escrimeresults.com/NCAA/ncaa2016.html")
     # ARCHIVED VERSION WORKS
-    html = pandas.read_html("http://web.archive.org/web/20160325002832/http://www.escrimeresults.com/NCAA/NCAA2016.html")
+    # html = pandas.read_html("http://web.archive.org/web/20160325002832/http://www.escrimeresults.com/NCAA/NCAA2016.html")
     # EMPTY DOESNT WORK
     # html = pandas.read_html("http://web.archive.org/web/20160324121938/http://www.escrimeresults.com/NCAA/NCAA2016.html")
     # Create bouts remain dictionary
@@ -72,8 +72,8 @@ def home():
                     boutsRemain[0][1][3] = "DONE"
                 break
         if (isOver):
-            boutsRemain[0][1][2] = "WINNER, WINNER!"
-            boutsRemain[0][1][3] = "CHICKEN DINNER!"
+            boutsRemain[0][1][2] = "WINNER OF THE 2017"
+            boutsRemain[0][1][3] = "NCAA FENCING CHAMPIONSHIP!!"
         for i in range (1, schools):
             # win difference
             diff = int(boutsRemain[0][1][0]) - int(boutsRemain[i][1][0])
@@ -93,7 +93,12 @@ def home():
                 else:
                     boutsRemain[i][1][2] = diff
                     boutsRemain[i][1][3] = "OUT"
+        # for i in range(0, schools):
+            # if (int(boutsRemain[i][1][1]) == 0):
+                # boutsRemain[i][1][1] == "DONE"
+                # print ("Changed bouts remain for " + boutsRemain[i][0] + " to " + str(boutsRemain[i][1][1]))
     else:
+
         print ("derp...")
     # name in quotes must be inside templates folder
     return render_template("home.html", boutsRemain=boutsRemain)
