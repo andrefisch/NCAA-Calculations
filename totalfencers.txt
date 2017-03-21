@@ -1,0 +1,27 @@
+Columbia/Barnard: 12
+Notre Dame: 12
+Harvard: 11
+Ohio State University: 11
+Pennsylvania, University of: 11
+Princeton University: 11
+Pennsylvania State University: 10
+Stanford University: 9
+St. John's University: 8
+Yale University: 8
+Duke University: 7
+New York University: 7
+Wayne State University: 4
+Cornell University: 3
+NJ Institute of Technology: 3
+Boston College: 2
+University of the Incarnate Word: 2
+Northwestern University: 2
+Temple University: 2
+U.C. San Diego: 2
+Air Force Academy: 1
+Brown University: 1
+University of Detroit Mercy: 1
+Farleigh Dickinson University: 1
+MIT: 1
+UNC, Chapel Hill: 1
+Vassar College: 1
