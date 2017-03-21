@@ -1,18 +1,24 @@
 from flask import Flask, render_template
 import pandas
 import operator
-# import os
+import random
 
 app = Flask(__name__)
 
 # Import the dictionary file
 schoolConversion = {}
-# dir = os.path.dirname(os.path.realpath('__file__'))
-# filename = dir + "/static/text/schoolDict.txt"
 with open("./static/text/schoolDict.txt") as f:
     for line in f:
        (key, val) = line.strip('\n').split(";")
        schoolConversion[key] = val
+andrewList = []
+with open("./static/text/andrewList.txt") as f:
+    for line in f:
+        andrewList.append(line.strip('\n'))
+elijahList = []
+with open("./static/text/elijahList.txt") as f:
+    for line in f:
+        elijahList.append(line.strip('\n'))
 
 @app.route('/')
 def home():
@@ -108,7 +114,9 @@ def home():
 
 @app.route('/about/')
 def about():
-    return render_template("about.html")
+    andrew = random.choice(andrewList)
+    elijah = random.choice(elijahList)
+    return render_template("about.html", andrew=andrew, elijah=elijah)
 
 @app.route('/display/')
 def display():
