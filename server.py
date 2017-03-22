@@ -5,16 +5,25 @@ import random
 
 app = Flask(__name__)
 
-# Import the dictionary file
+# Import the dictionary file for school conversion
 schoolConversion = {}
 with open("./static/text/schoolDict.txt") as f:
     for line in f:
-       (key, val) = line.strip('\n').split(";")
-       schoolConversion[key] = val
+        (key, val) = line.strip('\n').split(";")
+        schoolConversion[key] = val
+fencersPerSchool = {}
+# Import the dictionary file for number of fencers per school
+'''
+with open("./static/text/numFencers.txt") as f:
+    for line in f:
+        (key, val) = line.strip('\n').split(";")
+'''
+# Import list of Andrew quips
 andrewList = []
 with open("./static/text/andrewList.txt") as f:
     for line in f:
         andrewList.append(line.strip('\n'))
+# Import list of Elijah quips
 elijahList = []
 with open("./static/text/elijahList.txt") as f:
     for line in f:
