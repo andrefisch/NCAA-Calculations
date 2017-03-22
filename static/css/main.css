@@ -1,9 +1,9 @@
 body {
     margin: 5;
-    padding: 5;
+    padding: 15;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #060;
-    position:fixed
+    position:absolute;
 }
 
 
