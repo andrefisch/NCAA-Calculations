@@ -91,7 +91,7 @@ def home():
                     boutsRemain[0][1][3] = "DONE"
                 break
         if (isOver):
-            boutsRemain[0][1][2] = "WINNER OF THE 2017"
+            boutsRemain[0][1][2] = "WINNER OF THE 2016"
             boutsRemain[0][1][3] = "NCAA FENCING CHAMPIONSHIP!!"
         for i in range (1, schools):
             # win difference
