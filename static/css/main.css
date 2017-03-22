@@ -3,6 +3,7 @@ body {
     padding: 5;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #060;
+    position:fixed
 }
 
 
@@ -46,7 +47,6 @@ header h1.logo:hover {
  */
 
 table.center {
-
     margin-left:auto; 
     margin-right:auto
     font-family: arial, sans-serif;
