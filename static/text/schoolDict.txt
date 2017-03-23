@@ -25,5 +25,5 @@ University of the Incarnate Word;UIW
 Lawrence University;LAWR
 M.I.T.;MIT
 Farleigh Dickinson University;FDU
-University of Detroit Mercy;UDM
+Detroit Mercy, University of;UDM
 Vassar College;VASS
