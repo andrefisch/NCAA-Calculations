@@ -33,7 +33,7 @@ with open("./static/text/elijahList.txt") as f:
 def home():
     # Get the information and make the dictionary
     # 2016 final version
-    html = pandas.read_html("http://escrimeresults.com/NCAA/ncaa2016.html")
+    html = pandas.read_html("http://escrimeresults.com/NCAA/ncaa2017.html")
     # ARCHIVED VERSION WORKS
     # html = pandas.read_html("http://web.archive.org/web/20160325002832/http://www.escrimeresults.com/NCAA/NCAA2016.html")
     # EMPTY DOESNT WORK
@@ -91,7 +91,7 @@ def home():
                     boutsRemain[0][1][3] = "DONE"
                 break
         if (isOver):
-            boutsRemain[0][1][2] = "WINNER OF THE 2016"
+            boutsRemain[0][1][2] = "WINNER OF THE 2017"
             boutsRemain[0][1][3] = "NCAA FENCING CHAMPIONSHIP!!"
         for i in range (1, schools):
             # win difference
