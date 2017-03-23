@@ -21,7 +21,7 @@ Boston College;BC
 UNC, Chapel Hill;UNC
 U.S. Air Force Academy;USAF
 Brown University;BROW
-University of the Incarnate Word;UIW
+Incarnate Word, University of the;UIW
 Lawrence University;LAWR
 M.I.T.;MIT
 Farleigh Dickinson University;FDU

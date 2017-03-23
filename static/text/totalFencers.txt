@@ -14,7 +14,7 @@ Wayne State University;4
 Cornell University;3
 NJ Institute of Technology;3
 Boston College;2
-University of the Incarnate Word;2
+Incarnate Word, University of the;2
 Northwestern University;2
 Temple University;2
 U.C. San Diego;2
