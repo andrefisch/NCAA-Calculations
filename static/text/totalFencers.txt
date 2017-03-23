@@ -2,13 +2,13 @@ Columbia/Barnard;12
 Notre Dame;12
 Harvard University;11
 Ohio State University;11
-Pennsylvania, University of;11
+Pennsylvania, University of;10
 Princeton University;11
 Pennsylvania State University;10
 Stanford University;9
 St. John's University;8
 Yale University;8
-Duke University;7
+Duke University;8
 New York University;7
 Wayne State University;4
 Cornell University;3
