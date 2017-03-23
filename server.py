@@ -85,7 +85,11 @@ def home():
                 remain = int(boutsRemain[0][1][1])
                 if (remain > 0):
                     boutsRemain[0][1][2] = need
-                    boutsRemain[0][1][3] = str(round(need / remain * 100.0, 1)) + "%"
+                    clinchPercent = round(need / remain * 100.0, 1)
+                    if (clinchPercent > 100):
+                        boutsRemain[0][1][3] = "Clinch impossible at this point"
+                    else:
+                        boutsRemain[0][1][3] = str(round(need / remain * 100.0, 1)) + "%"
                 else:
                     boutsRemain[0][1][2] = "DONE"
                     boutsRemain[0][1][3] = "DONE"
