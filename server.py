@@ -120,7 +120,7 @@ def home():
             # current wins / (total - remaining) * 100.0
             totalBouts = (int(fencersPerSchool[boutsRemain[i][0]]) * 23)
             percent = round(boutsRemain[i][1][0] / (totalBouts - boutsRemain[i][1][1]) * 100.0, 1)
-            boutsRemain[i][1][0] = str(boutsRemain[i][1][0]) + " (" + str(percent) + ")"
+            boutsRemain[i][1][0] = str(boutsRemain[i][1][0]) + " (" + str(percent) + "%)"
         # for i in range(0, schools):
             # if (int(boutsRemain[i][1][1]) == 0):
                 # boutsRemain[i][1][1] == "DONE"
