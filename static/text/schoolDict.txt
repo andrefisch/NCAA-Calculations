@@ -24,6 +24,6 @@ Brown University;BROW
 Incarnate Word, University of the;UIW
 Lawrence University;LAWR
 M.I.T.;MIT
-Farleigh Dickinson University;FDU
+Fairleigh Dickinson;FDU
 Detroit Mercy, University of;UDM
 Vassar College;VASS

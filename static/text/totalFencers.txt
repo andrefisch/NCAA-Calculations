@@ -19,9 +19,12 @@ Northwestern University;2
 Temple University;2
 U.C. San Diego;2
 Air Force Academy;1
+U.S. Air Force Academy;1
 Brown University;1
 Detroit Mercy, University of;1
-Farleigh Dickinson University;1
+Fairleigh Dickinson University;1
+Fairleigh Dickinson;1
 MIT;1
+M.I.T.;1
 UNC, Chapel Hill;1
 Vassar College;1

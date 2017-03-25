@@ -10,11 +10,21 @@ body {
 
 /*
  *  * Formatting the header area
+    IRISH COLORS
+    border-style: solid;
+    border-color: #C89600;
+    background-color: #0C2340;
+    GREEN COLORS
+    border-style: solid;
+    border-color: green;
+    background-color: #4CAF50;
+ *
  */
 .center {
     margin: auto;
     width: 50%;
-    border: 3px solid green;
+    border-style: solid;
+    border-color: #C89600;
     padding: 10px;
 }
 
@@ -62,7 +72,7 @@ th, td {
 }
 
 th {
-    background-color: #4CAF50;
+    background-color: #0C2340;
     color: white;
 }
 
@@ -118,17 +128,6 @@ div.about {
 
 
 
-div.display {
-    padding: 10px 0 30px 0;
-    background-color: #E6E6FA;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    text-align: center;
-}
-
-
-
 h2 {
     font-size: 3em;
     margin-top: 40px;
@@ -170,5 +169,12 @@ h3 {
 
 .menu li a {
     color: #444;
+    text-decoration: none;
+}
+
+
+
+.menu li a:hover {
+    color: #666;
     text-decoration: none;
 }
