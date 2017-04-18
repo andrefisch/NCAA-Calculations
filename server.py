@@ -1,7 +1,10 @@
 from flask import Flask, render_template
+from io import BytesIO
+import pycurl
 import pandas
 import operator
 import random
+import urllib3,certifi
 
 app = Flask(__name__)
 
@@ -31,12 +34,20 @@ with open("./static/text/elijahList.txt") as f:
 @app.route('/')
 def home():
     # Get the information and make the dictionary
-    # 2016 final version
-    html = pandas.read_html("http://escrimeresults.com/NCAA/ncaa2017.html")
+    # 2017 final version
+    url = 'https://escrimeresults.com/NCAA/ncaa2017.html'
     # ARCHIVED VERSION WORKS
-    # html = pandas.read_html("http://web.archive.org/web/20160325002832/http://www.escrimeresults.com/NCAA/NCAA2016.html")
+    # url = http://web.archive.org/web/20160325002832/http://www.escrimeresults.com/NCAA/NCAA2016.html
     # EMPTY DOESNT WORK
-    # html = pandas.read_html("http://web.archive.org/web/20160324121938/http://www.escrimeresults.com/NCAA/NCAA2016.html")
+    # url = http://web.archive.org/web/20160324121938/http://www.escrimeresults.com/NCAA/NCAA2016.html
+    buffer = BytesIO()
+    c = pycurl.Curl()
+    c.setopt(c.URL, url)
+    c.setopt(c.WRITEDATA, buffer)
+    c.perform()
+    c.close()
+    body = buffer.getvalue()
+    html = pandas.read_html(body.decode('iso-8859-1'))
     # Create bouts remain dictionary
     boutsRemain = {}
     # go through list of schools at bottom of page
