@@ -4,7 +4,6 @@ import pycurl
 import pandas
 import operator
 import random
-import urllib3,certifi
 
 app = Flask(__name__)
 
@@ -145,7 +144,8 @@ def home():
 def about():
     andrew = random.choice(andrewList)
     elijah = random.choice(elijahList)
-    return render_template("about.html", andrew=andrew, elijah=elijah)
+    info = pycurl.version_info()
+    return render_template("about.html", andrew=andrew, elijah=elijah, info=info)
 
 
 if __name__ == "__main__":
