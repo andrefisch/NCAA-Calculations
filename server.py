@@ -1,6 +1,18 @@
+from requests.adapters import HTTPAdapter
+from requests.packages.urllib3.poolmanager import PoolManager
+import ssl
+
+class MyAdapter(HTTPAdapter):
+    def init_poolmanager(self, connections, maxsize, block=False):
+        self.poolmanager = PoolManager(num_pools=connections,
+                                       maxsize=maxsize,
+                                       block=block,
+                                       ssl_version=ssl.PROTOCOL_TLSv1)
+
+from lxml import html
 from flask import Flask, render_template
 from io import BytesIO
-import pycurl
+import requests
 import pandas
 import operator
 import random
@@ -39,30 +51,26 @@ def home():
     # url = http://web.archive.org/web/20160325002832/http://www.escrimeresults.com/NCAA/NCAA2016.html
     # EMPTY DOESNT WORK
     # url = http://web.archive.org/web/20160324121938/http://www.escrimeresults.com/NCAA/NCAA2016.html
-    buffer = BytesIO()
-    c = pycurl.Curl()
-    c.setopt(c.URL, url)
-    c.setopt(c.WRITEDATA, buffer)
-    c.perform()
-    c.close()
-    body = buffer.getvalue()
-    html = pandas.read_html(body.decode('iso-8859-1'))
+    s = requests.Session()
+    s.mount('https://', MyAdapter())
+    page = s.get(url)
+    content = pandas.read_html(page.content)
     # Create bouts remain dictionary
     boutsRemain = {}
     # go through list of schools at bottom of page
-    if (len(html[-2]) > 2):
-        for i in range(1, len(html[-2])):
+    if (len(content[-2]) > 2):
+        for i in range(1, len(content[-2])):
             schoolColumn = 2
             totalColumn = 3
             remainColumn = 4
-            temp = html[-2].iloc[i, schoolColumn].strip('\n')
+            temp = content[-2].iloc[i, schoolColumn].strip('\n')
             # 0: total wins
             # 1: bouts remaining
             # 2: bouts to clinch/bouts behind
             # 3: % of bouts needed to clinch/catch leader
             # 4: name of png for school logo
             # 5: current ranking
-            boutsRemain[temp] = [int(html[-2].iloc[i, totalColumn]), int(html[-2].iloc[i, remainColumn]), 0, 0.0, "", 0]
+            boutsRemain[temp] = [int(content[-2].iloc[i, totalColumn]), int(content[-2].iloc[i, remainColumn]), 0, 0.0, "", 0]
         # ADD A LITTLE FAKE DATA FOR TESTING
         # {{{
         # boutsRemain["Columbia/Barnard"][0] = 163
@@ -144,8 +152,7 @@ def home():
 def about():
     andrew = random.choice(andrewList)
     elijah = random.choice(elijahList)
-    info = pycurl.version_info()
-    return render_template("about.html", andrew=andrew, elijah=elijah, info=info)
+    return render_template("about.html", andrew=andrew, elijah=elijah)
 
 
 if __name__ == "__main__":
