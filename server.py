@@ -71,8 +71,8 @@ def home():
             # 4: name of png for school logo
             # 5: current ranking
             boutsRemain[temp] = [int(content[-2].iloc[i, totalColumn]), int(content[-2].iloc[i, remainColumn]), 0, 0.0, "", 0]
-        # ADD A LITTLE FAKE DATA FOR TESTING
         # {{{
+        # ADD A LITTLE FAKE DATA FOR TESTING
         # boutsRemain["Columbia/Barnard"][0] = 163
         # boutsRemain["Ohio State University"][1] = 10
         # boutsRemain["Princeton University"][1] = 20
@@ -80,6 +80,12 @@ def home():
         # boutsRemain["Notre Dame"][1] = 20
         # boutsRemain["Lawrence University"][1] = 200
         # }}}
+        '''
+        how to protect from key error
+        if key in dict:
+            rank = dict[key]
+        else:
+        '''
         # sort the bouts and store information in an array
         schools = len(boutsRemain)
         boutsRemain = sorted(boutsRemain.items(), key=lambda i: i[1][0], reverse=True)
