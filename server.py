@@ -10,8 +10,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    data = ResultService.get_current_results()
-    return render_template("home.html", boutsRemain=data)
+    ranking = ResultService.get_current_results()
+    return render_template("home.html", ranking=ranking)
 
 @app.route('/about/')
 def about():
