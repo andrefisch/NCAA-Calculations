@@ -1,5 +1,20 @@
 # NCAA-Calculations
 
+# Virtualenv
+It's good practice to run a virtual env so the different installations don't step on each other for other projects. Check out this documentation: https://virtualenv.pypa.io/en/stable/userguide/
+
+Once it is installed, in your project directory run the following command one time
+`virtualenv .`
+This will create the `bin` file and everything else needed for the virtualenv.
+
+Going forward you can activate and deactivate like so
+`source bin/activate`
+`deactivate`
+
+With the environment activated run
+`pip install -r requirements.txt`
+to install all of the project pre-reqs.
+
 # Tests
 `nosetests -v` will run all of the tests in the project in a test file and display the name of the test being run.
 See `src/test_school.py` for a simple example for creating a test file.
