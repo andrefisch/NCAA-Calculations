@@ -15,7 +15,7 @@ class School(object):
         return (self.wins - other_school.wins) > other_school.remaining_bouts
 
     def wins_to_clinch_over(self, other_school):
-        return other_school.bouts_remaining - (self.wins - other_school.wins) + 1
+        return other_school.remaining_bouts - (self.wins - other_school.wins) + 1
 
     @property
     def has_bouts_remaining(self):
