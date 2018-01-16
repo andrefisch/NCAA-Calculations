@@ -1,3 +1,7 @@
+from school import School
+from ranking import Ranking
+
+
 SCHOOL_COLUMN = 2
 TOTAL_COLUMN = 3
 REMAINING_BOUTS_COLUMN = 4
