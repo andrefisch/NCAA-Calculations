@@ -9,7 +9,7 @@ class School(object):
         self.wins = wins
         self.remaining_bouts = remaining_bouts
         self.total_bouts = total_bouts
-        self.school_log = school_logo
+        self.school_logo = school_logo
 
     def will_finish_higher(self, other_school):
         return (self.wins - other_school.wins) > other_school.remaining_bouts
