@@ -29,12 +29,10 @@ def get_current_results():
 
     content = _get_page_content(url=ESCRIME_RESULTS_2017_URL)
 
-    remaining_bout_data = ScrapingService.scrape_site_content_for_bout_data(
+    return ScrapingService.scrape_site_content_ranking_data(
         content=content,
         school_map=school_map,
         school_fencers_map=school_fencers_map)
-
-    return remaining_bout_data
 
 
 def _get_school_mappings():

@@ -2,25 +2,39 @@
 {%block content%}
 <body>
     <table class="center">
-        <tr>           
+        <tr>
             <th>Current Place</th>
             <th></th>
             <th>Current Leader</th>
             <th>Total Wins</th>
+            <th>Win Percentage</th>
             <th>Bouts Remaining</th>
             <th>Bouts Needed to Clinch</th>
         </tr>
         <tr>
-            <td>1.</td>
-            <td><img src="../static/images/{{boutsRemain[0][1][4]}}" alt="" style="width:auto; height:50px;"></td>
-            <td>{{boutsRemain[0][0]}}</td>
-            <td>{{boutsRemain[0][1][0]}}</td>
-            {% if boutsRemain[0][1][1] != 0 %}
-            <td>{{boutsRemain[0][1][1]}}</td>
-            <td>{{boutsRemain[0][1][2]}} ({{boutsRemain[0][1][3]}})</td>
+            <td>1</td>
+            <td><img src="../static/images/{{ranking.first_place.school_logo}}"
+                     alt=""
+                     style="width:auto; height:50px;"></td>
+            <td>{{ranking.first_place.name}}</td>
+            <td>{{ranking.first_place.wins}}</td>
+            <td>{{ranking.first_place.win_percent}}</td>
+
+            {% if ranking.first_place.has_bouts_remaining %}
+                <td>{{ranking.first_place.remaining_bouts}}</td>
             {% else %}
-            <td>DONE</td>
-            <td>{{boutsRemain[0][1][2]}} {{boutsRemain[0][1][3]}}</td>
+                <td>DONE</td>
+            {% endif %}
+
+            {% if ranking.is_over %}
+                <td>WINNER OF THE 2017 FENCING CHAMPIONSHIP!</td>
+            {% elif ranking.leader_can_clinch %}
+                <td>
+                    {{rankingbouts_leader_needs_to_clinch}}
+                    ({{ranking.percent_remaining_bouts_leader_needs_to_clinch}})
+                </td>
+            {% else %}
+                <td>"CANT CLINCH YET"</td>
             {% endif %}
         </tr>
         <tr>
@@ -28,24 +42,31 @@
             <th></th>
             <th>School</th>
             <th>Total Wins</th>
+            <th>Win Percentage</th>
             <th>Bouts Remaining</th>
             <th>Bouts Behind Leader</th>
         </tr>
-        {% for school in boutsRemain[1:] %}
+        {% for school in ranking.trailing_schools %}
             <tr>
-                <td>{{school[1][5]}}.</td>
-                <td><img src="../static/images/{{school[1][4]}}" alt="" style="width:auto; height:50px;"></td>
-                <td>{{school[0]}}</td>
-                <td>{{school[1][0]}}</td>
-                {% if school[1][1] != 0 %}
-                <td>{{school[1][1]}}</td>
+                <td>{{loop.index + 1}}.</td>
+                <td><img src="../static/images/{{school.school_logo}}"
+                         alt=""
+                         style="width:auto; height:50px;">
+                </td>
+                <td>{{school.name}}</td>
+                <td>{{school.wins}}</td>
+                <td>{{school.win_percent}}</td>
+
+                {% if school.has_bouts_remaining %}
+                    <td>{{school.remaining_bouts}}</td>
                 {% else %}
-                <td>DONE</td>
+                    <td>DONE</td>
                 {% endif %}
-                {% if school[1][3] != "OUT" %}
-                <td>{{school[1][2]}} ({{school[1][3]}})</td>
+
+                {% if not ranking.is_school_out(school) %}
+                    <td>{{school.bouts_behind_leader}}</td>
                 {% else %}
-                <td BGCOLOR="#FF1A1A" style="font-weight:bold">{{school[1][3]}}</td>
+                    <td BGCOLOR="#FF1A1A" style="font-weight:bold">OUT</td>
                 {% endif %}
             </tr>
         {% endfor %}
