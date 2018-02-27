@@ -1,17 +1,20 @@
-from requests.adapters import HTTPAdapter
 from flask import Flask, render_template
+from flask_caching import Cache
+from requests.adapters import HTTPAdapter
 import random
-
 import src.results_sevice as ResultService
 
 
 app = Flask(__name__)
 
+cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 
 @app.route('/')
+@cache.cached(timeout=300)
 def home():
     ranking = ResultService.get_current_results()
     return render_template("home.html", ranking=ranking)
+
 
 @app.route('/about/')
 def about():
