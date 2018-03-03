@@ -147,6 +147,14 @@ h3 {
     color: #999;
 }
 
+h4 {
+    margin: 0;
+    font-size: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    float: left;
+}
 
 
 .menu {
