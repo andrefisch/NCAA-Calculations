@@ -2,6 +2,7 @@ body {
     margin: 5;
     padding: 15;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
     color: #060;
     position: absolute;
 }
@@ -129,7 +130,8 @@ div.about {
 
 
 h2 {
-    font-size: 18px;
+    font-size: 1.4em;
+    font: Helvetica Neue;
     margin-top: 40px;
     text-align: center;
     letter-spacing: -2px;
@@ -144,17 +146,9 @@ h3 {
     margin-top: 30px;
     text-align: center;
     letter-spacing: -1px;
-    color: #999;
+    color: #060;
 }
 
-h4 {
-    margin: 0;
-    font-size: 1.7em;
-    color: #fff;
-    text-transform: uppercase;
-    text-align: center;
-    float: left;
-}
 
 
 .menu {
