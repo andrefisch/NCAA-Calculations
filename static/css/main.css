@@ -129,10 +129,11 @@ div.about {
 
 
 h2 {
-    font-size: 3em;
+    font-size: 18px;
     margin-top: 40px;
     text-align: center;
     letter-spacing: -2px;
+    color: #444;
 }
 
 
