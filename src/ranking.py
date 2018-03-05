@@ -23,7 +23,6 @@ class Ranking(object):
                          self.first_place.remaining_bouts)
         return "{:.1%}".format(percent_wins)
 
-    @property
     def bouts_behind_leader(self, school):
         return self.first_place.wins - school.wins
 
@@ -38,5 +37,3 @@ class Ranking(object):
 
     def is_school_out(self, school):
         return self.first_place.will_finish_higher(school)
-
-

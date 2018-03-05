@@ -30,7 +30,7 @@
                 <td>WINNER OF THE 2018 FENCING CHAMPIONSHIP!</td>
             {% elif ranking.leader_can_clinch %}
                 <td>
-                    {{rankingbouts_leader_needs_to_clinch}}
+                    {{ranking.bouts_leader_needs_to_clinch}}
                     ({{ranking.percent_remaining_bouts_leader_needs_to_clinch}})
                 </td>
             {% else %}
@@ -64,7 +64,7 @@
                 {% endif %}
 
                 {% if not ranking.is_school_out(school) %}
-                    <td>{{school.bouts_behind_leader}}</td>
+                    <td>{{ranking.bouts_behind_leader(school)}}</td>
                 {% else %}
                     <td BGCOLOR="#FF1A1A" style="font-weight:bold">OUT</td>
                 {% endif %}

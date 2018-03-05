@@ -1,0 +1,25 @@
+Columbia/Barnard;12
+Ohio State University;11
+Princeton University;12
+St. John's University;12
+Notre Dame;12
+Pennsylvania State University;9
+Harvard University;9
+Pennsylvania, University of;9
+Duke University;12
+NJ Institute of Technology;5
+Stanford University;7
+Northwestern University;4
+New York University;4
+Wayne State University;3
+Cornell University;4
+Temple University;4
+Yale University;4
+U.C. San Diego;4
+Sacred Heart University;3
+Boston College;2
+UNC, Chapel Hill;2
+U.S. Air Force Academy;1
+Brown University;1
+University of the Incarnate Word;1
+Lawrence University;1
