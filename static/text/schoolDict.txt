@@ -1,29 +1,57 @@
 Columbia/Barnard;COLU
 Ohio State University;OSU
+Ohio State;OSU
 Princeton University;PRIN
+Princeton;PRIN
 St. John's University;STJ
+St. John's;STJ
 Notre Dame;ND
 Pennsylvania State University;PSU
+Penn State;
 Harvard University;HARV
+Harvard;
 Pennsylvania, University of;PENN
+University of Pennsylvania;PENN
+Pennsylvania;PENN
 Duke University;DUKE
+Duke;DUKE
 NJ Institute of Technology;NJIT
+N.J. Institute of Technology;NJIT
+New Jersey Institute of Technology;NJIT
 Stanford University;STAN
+Stanford;STAN
 Northwestern University;NW
+Northwestern;NW
 New York University;NYU
+N.Y.U.;NYU
 Wayne State University;WAYN
+Wayne State;WAYN
 Cornell University;CORN
+Cornell;CORN
 Temple University;TEMP
+Temple;TEMP
 Yale University;YALE
+Yale;YALE
 U.C. San Diego;UCSD
 Sacred Heart University;SACR
+Sacred Heart;SACR
 Boston College;BC
 UNC, Chapel Hill;UNC
+North Carolina;UNC
 U.S. Air Force Academy;USAF
+Air Force;USAF
 Brown University;BROW
+Brown;BROW
 Incarnate Word, University of the;UIW
+University of the Incarnate Word;UIW
+U.I.W.;UIW
 Lawrence University;LAWR
+Lawrence;
+Massachusets Institute of Technology;MIT
 M.I.T.;MIT
 Fairleigh Dickinson;FDU
 Detroit Mercy, University of;UDM
+University of Detroit Mercy;UDM
+Detroid Mercy;UDM
 Vassar College;VASS
+Vassar;VASS

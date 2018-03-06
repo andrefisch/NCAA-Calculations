@@ -9,11 +9,11 @@ class Fencer(object):
         self.wins = wins
         self.bouts_fenced = bouts_fenced
 
-    def will_finish_higher(self, other_school):
-        return (self.wins - other_school.wins) > other_school.remaining_bouts
+    def will_finish_higher(self, other_fencer):
+        return (self.wins - other_fencer.wins) > other_fencer.remaining_bouts
 
-    def wins_to_clinch_over(self, other_school):
-        return other_school.remaining_bouts - (self.wins - other_school.wins) + 1
+    def wins_to_clinch_over(self, other_fencer):
+        return other_fencer.remaining_bouts - (self.wins - other_fencer.wins) + 1
 
     @property
     def has_bouts_remaining(self):
