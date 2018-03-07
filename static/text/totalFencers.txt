@@ -2,8 +2,8 @@ Columbia/Barnard;12
 Notre Dame;12
 Harvard University;11
 Ohio State University;11
-Pennsylvania, University of;10
 Princeton University;11
+Pennsylvania, University of;10
 Pennsylvania State University;10
 Stanford University;9
 St. John's University;8

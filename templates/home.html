@@ -5,7 +5,7 @@
         <tr>
             <th>Current Place</th>
             <th></th>
-            <th>Current Leader</th>
+            <th>Current Leader (Fencers)</th>
             <th>Total Wins</th>
             <th>Win Percentage</th>
             <th>Bouts Remaining</th>
@@ -16,7 +16,7 @@
             <td><img src="../static/images/{{ranking.first_place.school_logo}}"
                      alt=""
                      style="width:auto; height:50px;"></td>
-            <td>{{ranking.first_place.name}}</td>
+            <td>{{ranking.first_place.name}} ({{ranking.first_place.num_fencers}})</td>
             <td>{{ranking.first_place.wins}}</td>
             <td>{{ranking.first_place.win_percent}}</td>
 
@@ -40,7 +40,7 @@
         <tr>
             <th>Current Place</th>
             <th></th>
-            <th>School</th>
+            <th>School (Fencers)</th>
             <th>Total Wins</th>
             <th>Win Percentage</th>
             <th>Bouts Remaining</th>
@@ -53,7 +53,7 @@
                          alt=""
                          style="width:auto; height:50px;">
                 </td>
-                <td>{{school.name}}</td>
+                <td>{{school.name}} ({{school.num_fencers}})</td>
                 <td>{{school.wins}}</td>
                 <td>{{school.win_percent}}</td>
 

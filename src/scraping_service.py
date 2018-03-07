@@ -46,6 +46,7 @@ def _get_schools_from_content(content,
             school_logo = "NCAA.png"
 
         school = School(school_name,
+                        school_fencers_map[school_name],
                         wins,
                         remaining_bouts,
                         total_bouts,

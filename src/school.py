@@ -1,11 +1,13 @@
 class School(object):
     def __init__(self,
                  name,
+                 num_fencers,
                  wins,
                  remaining_bouts,
                  total_bouts,
                  school_logo=None):
         self.name = name
+        self.num_fencers = num_fencers
         self.wins = wins
         self.remaining_bouts = remaining_bouts
         self.total_bouts = total_bouts
