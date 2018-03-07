@@ -27,7 +27,7 @@
             {% endif %}
 
             {% if ranking.is_over %}
-                <td>WINNER OF THE 2018 FENCING CHAMPIONSHIP!</td>
+            <td>WINNER OF THE {{ranking.year}} FENCING CHAMPIONSHIP!</td>
             {% elif ranking.leader_can_clinch %}
                 <td>
                     {{ranking.bouts_leader_needs_to_clinch}}

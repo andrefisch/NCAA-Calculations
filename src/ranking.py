@@ -1,8 +1,9 @@
 class Ranking(object):
-    def __init__(self, schools):
+    def __init__(self, schools, year):
         self.schools = sorted(schools,
                               key=lambda x: x.wins,
                               reverse=True)
+        self.year = year
 
     @property
     def is_over(self):

@@ -11,14 +11,15 @@ COMBINED_TABLE = -2
 
 def scrape_site_content_ranking_data(content,
                                      school_map,
-                                     school_fencers_map):
+                                     school_fencers_map,
+                                     year):
     if not _has_content(content):
         raise Exception(message="No content found") # TODO, raise more specific error
 
     schools = _get_schools_from_content(content,
                                         school_map,
                                         school_fencers_map)
-    ranking = Ranking(schools)
+    ranking = Ranking(schools, year)
 
     return ranking
 
