@@ -146,6 +146,7 @@ h3 {
         position: absolute;
     }
     .menu {
+        float: right;
         right: 0px;
         padding-right: 10px;
     }
