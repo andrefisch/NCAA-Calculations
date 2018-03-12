@@ -104,6 +104,9 @@ tr:nth-child(odd) {
     .menu {
         width: 100%;
     }
+    header h1.logo {
+        font-size: 1.4em;
+    }
 }
 
 .container {
