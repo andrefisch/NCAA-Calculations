@@ -142,6 +142,7 @@ h3 {
  */
 
 @media (max-device-width: 600px) {
+    /*
     .menu {
         float: right;
         right: 0px;
@@ -150,6 +151,7 @@ h3 {
     .menu {
         width: 100%;
     }
+    */
 }
 
 
