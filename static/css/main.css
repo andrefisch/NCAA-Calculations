@@ -142,9 +142,6 @@ h3 {
  */
 
 @media (max-device-width: 600px) {
-    body {
-        position: absolute;
-    }
     .menu {
         float: right;
         right: 0px;
