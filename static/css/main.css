@@ -87,24 +87,6 @@ tr:nth-child(odd) {
   background-color: rgba(98, 168, 229, .25);
 }
 
-/*
- *  * Center the body content
- */
-
-@media (max-device-width: 600px) {
-    body {
-        position: absolute;
-    }
-    .menu {
-        position: absolute;
-        right: 0px;
-        padding-right: 10px;
-    }
-    .menu {
-        width: 100%;
-    }
-}
-
 .container {
     width: 100%;
     margin: 0 auto;
@@ -154,6 +136,23 @@ h3 {
     color: #060;
 }
 
+
+/*
+ *  * Center the body content
+ */
+
+@media (max-device-width: 600px) {
+    body {
+        position: absolute;
+    }
+    .menu {
+        right: 0px;
+        padding-right: 10px;
+    }
+    .menu {
+        width: 100%;
+    }
+}
 
 
 .menu {
