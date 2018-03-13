@@ -1,0 +1,33 @@
+Columbia/Barnard;12
+Notre Dame;12
+Ohio State University;12
+Pennsylvania, University of;12
+Pennsylvania State University;10
+Harvard University;10
+Princeton University;9
+St. John's University;9
+Yale University;8
+Stanford University;7
+Duke University;7
+New York University;6
+U.C. San Diego;5
+U.S. Air Force Academy;4
+Air Force Academy;4
+Northwestern University;4
+Temple University;3
+NJ Institute of Technology;3
+Incarnate Word, University of the;2
+Cornell University;2
+Wayne State University;2
+Boston College;1
+Brown University;1
+Detroit Mercy, University of;1
+Fairleigh Dickinson University;1
+Fairleigh Dickinson;1
+MIT;1
+M.I.T.;1
+UNC, Chapel Hill;1
+North Carolina;1
+Johns Hopkins University;1
+Johns Hopkins;1
+Sacred Heart;1
