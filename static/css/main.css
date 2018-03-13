@@ -101,7 +101,7 @@ tr:nth-child(odd) {
         padding-right: 10px;
     }
     table.center {
-        width: 800px;
+        width: 100%;
     }
 }
 
