@@ -1,0 +1,8 @@
+Columbia/Barnard;7FBEE7;005188
+Notre Dame;C89600;0C2340
+Ohio State University;666666;BB0000
+Harvard University;8C8179;A41034
+Pennsylvania State University;FFFFFF;093162
+Pennsylvania, University of;9A0000;041F54
+Princeton University;050000;F78526
+Columbia/Barnard;201E1E;D30C48

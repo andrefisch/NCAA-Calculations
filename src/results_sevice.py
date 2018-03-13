@@ -42,6 +42,17 @@ def get_current_results():
         year=year)
 
 
+def get_school_colors():
+    school_colors = {}
+
+    with open("./static/text/schoolColors.txt") as f:
+        for line in f:
+            (key, color1, color2) = line.strip('\n').split(";")
+            school_colors[key] = [color1, color2]
+
+    return school_colors
+
+
 def _get_school_mappings():
     school_map = {}
 

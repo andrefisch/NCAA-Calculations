@@ -1,21 +1,21 @@
 {%extends "layout.html"%}
 {%block content%}
 <body>
-    <table class="center">
+    <table class="center" BORDERCOLOR={{color[0]}}>
         <tr>
-            <th>Current Place</th>
-            <th></th>
-            <th>Current Leader (Fencers)</th>
-            <th>Total Wins</th>
-            <th>Win Percentage</th>
-            <th>Bouts Remaining</th>
-            <th>Bouts Needed to Clinch</th>
+            <th BGCOLOR={{color[1]}}>Current Place</th>
+            <th BGCOLOR={{color[1]}}></th>
+            <th BGCOLOR={{color[1]}}>Current Leader (Fencers)</th>
+            <th BGCOLOR={{color[1]}}>Total Wins</th>
+            <th BGCOLOR={{color[1]}}>Win Percentage</th>
+            <th BGCOLOR={{color[1]}}>Bouts Remaining</th>
+            <th BGCOLOR={{color[1]}}>Bouts Needed to Clinch</th>
         </tr>
         <tr>
             <td>1</td>
             <td><img src="../static/images/small/{{ranking.first_place.school_logo}}"
                      alt=""
-                     style="width:auto; height:75px;"></td>
+                     style="width:auto; height:75px;"> </td>
             <td>{{ranking.first_place.name}} ({{ranking.first_place.num_fencers}})</td>
             <td>{{ranking.first_place.wins}}</td>
             <td>{{ranking.first_place.win_percent}}</td>
@@ -38,13 +38,13 @@
             {% endif %}
         </tr>
         <tr>
-            <th>Current Place</th>
-            <th></th>
-            <th>School (Fencers)</th>
-            <th>Total Wins</th>
-            <th>Win Percentage</th>
-            <th>Bouts Remaining</th>
-            <th>Bouts Behind Leader</th>
+            <th BGCOLOR={{color[1]}}>Current Place</th>
+            <th BGCOLOR={{color[1]}}></th>
+            <th BGCOLOR={{color[1]}}>School (Fencers)</th>
+            <th BGCOLOR={{color[1]}}>Total Wins</th>
+            <th BGCOLOR={{color[1]}}>Win Percentage</th>
+            <th BGCOLOR={{color[1]}}>Bouts Remaining</th>
+            <th BGCOLOR={{color[1]}}>Bouts Behind Leader</th>
         </tr>
         {% for school in ranking.trailing_schools %}
             <tr>

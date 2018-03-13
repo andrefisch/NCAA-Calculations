@@ -1,12 +1,12 @@
 Columbia/Barnard;12
-Ohio State University;11
 Princeton University;12
 St. John's University;12
 Notre Dame;12
+Ohio State University;11
 Pennsylvania State University;9
 Harvard University;9
 Pennsylvania, University of;9
-Duke University;12
+Duke University;7
 NJ Institute of Technology;5
 Stanford University;7
 Northwestern University;4

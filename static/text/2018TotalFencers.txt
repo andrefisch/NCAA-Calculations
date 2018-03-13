@@ -9,9 +9,9 @@ Pennsylvania;10
 University of Pennsylvania;10
 Princeton;9
 Princeton University;9
-Yale;8
 St. Johns;9
 St. Johns University;9
+Yale;8
 Stanford;7
 Duke;7
 New York University;6

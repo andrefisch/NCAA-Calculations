@@ -22,7 +22,7 @@ body {
     margin: auto;
     width: 65%;
     border-style: solid;
-    border-color: #C89600;
+    /*border-color: #C89600;*/
     padding: 10px;
 }
 
@@ -71,7 +71,7 @@ th, td {
 }
 
 th {
-    background-color: #0C2340;
+    /*background-color: #0C2340;*/
     color: white;
 }
 
