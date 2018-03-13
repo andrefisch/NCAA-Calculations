@@ -60,12 +60,12 @@ header h1.logo:hover {
  *   */
 
 table.center {
+    width: 65%;
     margin-left: auto; 
     margin-right: auto;
     font-family: arial, sans-serif;
     font-size: 20px;
     border-collapse: collapse;
-    width: 800px;
 }
 
 th, td {
@@ -100,13 +100,13 @@ tr:nth-child(odd) {
         right: 0px;
         padding-right: 10px;
     }
-    table.center {
+    .center {
         width: 100%;
     }
 }
 
 .container {
-    width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 
