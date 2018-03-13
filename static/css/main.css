@@ -1,26 +1,26 @@
 body {
     margin: 5;
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
     padding: 15;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: left;
     color: #060;
+    position: absolute;
 }
 
 
 
 /*
- *  * Formatting the header area
-    IRISH COLORS
-    border-style: solid;
-    border-color: #C89600;
-    background-color: #0C2340;
-    GREEN COLORS
-    border-style: solid;
-    border-color: green;
-    background-color: #4CAF50;
- */
+ *  *  * Formatting the header area
+ *      IRISH COLORS
+ *          border-style: solid;
+ *              border-color: #C89600;
+ *                  background-color: #0C2340;
+ *                      GREEN COLORS
+ *                          border-style: solid;
+ *                              border-color: green;
+ *                                  background-color: #4CAF50;
+ *                                   */
+
 .center {
     margin: auto;
     width: 50%;
@@ -29,10 +29,6 @@ body {
     padding: 10px;
 }
 
-.center2 {
-    margin: auto;
-    width: 65%;
-}
 
 header {
     background-color: #DFB887;
@@ -44,7 +40,7 @@ header {
 
 header h1.logo {
     margin: 0;
-    font-size: 1.5em;
+    font-size: 1.7em;
     color: #fff;
     text-transform: uppercase;
     float: left;
@@ -60,8 +56,8 @@ header h1.logo:hover {
 }
 
 /*
- *  * Formatting for table
- */
+ *  *  * Formatting for table
+ *   */
 
 table.center {
     margin-left: auto; 
@@ -69,7 +65,7 @@ table.center {
     font-family: arial, sans-serif;
     font-size: 20px;
     border-collapse: collapse;
-    width: 60%;
+    width: 800px;
 }
 
 th, td {
@@ -88,11 +84,26 @@ tr:nth-child(odd) {
 }
 
 .cublue {
-  background-color: rgba(98, 168, 229, .25);
+    background-color: rgba(98, 168, 229, .25);
+}
+
+/*
+ *  *  * Center the body content
+ *   */
+
+@media (max-device-width: 600px) {
+    body {
+        position: absolute;
+    }
+    .menu {
+        position: absolute;
+        right: 0px;
+        padding-right: 10px;
+    }
 }
 
 .container {
-    width: 100%;
+    width: 1200px;
     margin: 0 auto;
 }
 
@@ -100,6 +111,17 @@ tr:nth-child(odd) {
 
 div.home {
     padding: 10px 0 30px 0;
+    background-color: #E6E6FA;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+
+
+div.about {
+    padding: 10px 30px 10px 30px;
     background-color: #E6E6FA;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
@@ -129,23 +151,6 @@ h3 {
     color: #060;
 }
 
-
-/*
- *  * Center the body content
- */
-
-@media (max-device-width: 600px) {
-    /*
-    .menu {
-        float: right;
-        right: 0px;
-        padding-right: 10px;
-    }
-    .menu {
-        width: 100%;
-    }
-    */
-}
 
 
 .menu {
