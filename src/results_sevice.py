@@ -21,9 +21,9 @@ import scraping_service as ScrapingService
 
 
 # 2016 ARCHIVED VERSION WORKS
-# url = "http://web.archive.org/web/20160325002832/http://www.escrimeresults.com/NCAA/NCAA2016.html"
+url = "http://web.archive.org/web/20160325002832/http://www.escrimeresults.com/NCAA/NCAA2016.html"
 # 2017 WORKS
-url = "https://escrimeresults.com/NCAA/ncaa2017.html"
+# url = "https://escrimeresults.com/NCAA/ncaa2017.html"
 # 2018 WE WILL SEE
 # url = "https://escrimeresults.com/NCAA/ncaa2018.html"
 
@@ -56,8 +56,8 @@ def _get_school_mappings():
 def _get_school_fencers_map():
     school_fencers_map = {}
 
-    # with open("./static/text/oldTotalFencers.txt") as f:
-    with open("./static/text/totalFencers.txt") as f:
+    with open("./static/text/oldTotalFencers.txt") as f:
+    # with open("./static/text/totalFencers.txt") as f:
         for line in f:
             (key, val) = line.strip('\n').split(";")
             school_fencers_map[key] = val
