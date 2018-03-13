@@ -12,8 +12,10 @@ Going forward you can activate and deactivate like so
 `deactivate`
 
 With the environment activated run
-`pip install -r requirements.txt`
+`pip2 install -r requirements.txt`
 to install all of the project pre-reqs.
+Then run the following command to run the code
+`python2 server.py`
 
 # Tests
 `nosetests -v` will run all of the tests in the project in a test file and display the name of the test being run.
