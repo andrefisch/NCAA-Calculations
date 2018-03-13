@@ -1,6 +1,4 @@
 body {
-    margin: 5;
-    padding: 15;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: left;
     color: #060;
@@ -23,9 +21,16 @@ body {
 
 .center {
     margin: auto;
-    width: 50%;
+    width: 65%;
     border-style: solid;
     border-color: #C89600;
+    padding: 10px;
+}
+
+
+.center2 {
+    margin: auto;
+    width: 65%;
     padding: 10px;
 }
 
