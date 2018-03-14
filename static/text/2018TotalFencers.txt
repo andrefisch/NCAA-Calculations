@@ -1,21 +1,21 @@
 Columbia/Barnard;12
 Barnard College;12
 Notre Dame;12
-Ohio State;12
 Ohio State University;12
-Harvard;10
+Ohio State;12
 Harvard University;10
-Penn State;10
+Harvard;10
 Pennsylvania State University;10
-Pennsylvania;10
+Penn State;10
 University of Pennsylvania;10
 Pennsylvania, University of;9
-Princeton;9
+Pennsylvania;10
 Princeton University;9
-St. Johns;9
-St. John's;9
-St. Johns University;9
+Princeton;9
 St. John's University;9
+St. Johns University;9
+St. John's;9
+St. Johns;9
 Yale University;8
 Yale;8
 Stanford University;7
@@ -23,32 +23,35 @@ Stanford;7
 Duke University;7
 Duke;7
 New York University;6
-UC San Diego;5
 U.C. San Diego;5
+UC San Diego;5
 Northwestern University;4
 Northwestern;4
-Air Force;4
 U.S. Air Force Academy;4
-NJIT;3
+Air Force Academy;4
+Air Force;4
 New Jersey Institute of Technology;3
 NJ Institute of Technology;3
-Temple;3
+NJIT;3
 Temple University;3
+Temple;3
 Cornell University;2
 Cornell;2
-Incarnate Word;2
 Incarnate Word, University of the;2
+Incarnate Word;2
 Wayne State University;2
 Wayne State;2
+Brown University;1
 Brown;1
 Brown College;1
-Sacred Heart;1
 Sacred Heart University;1
+Sacred Heart;1
 Boston College;1
-MIT;1
 M.I.T.;1
-North Carolina;1
+MIT;1
 UNC, Chapel Hill;1
-Johns Hopkins;1
+North Carolina;1
 Johns Hopkins University;1
+Johns Hopkins;1
+Fairleigh Dickinson University;1
 Fairleigh Dickinson;1
