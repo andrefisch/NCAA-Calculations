@@ -37,16 +37,17 @@ def _get_schools_from_content(content,
         wins = int(content[COMBINED_TABLE].iloc[i, TOTAL_COLUMN])
         remaining_bouts = int(content[COMBINED_TABLE].iloc[i, REMAINING_BOUTS_COLUMN])
         if school_name in school_fencers_map:
-            total_bouts = int(school_fencers_map[school_name]) * BOUTS_PER_FENCER
+            total_fencers = int(school_fencers_map[school_name])
         else:
-            total_bouts = 1
+            total_fencers = 1
+        total_bouts = total_fencers * BOUTS_PER_FENCER
         if school_name in school_map:
             school_logo = "%s.png" % school_map[school_name]
         else:
             school_logo = "NCAA.png"
 
         school = School(school_name,
-                        school_fencers_map[school_name],
+                        total_fencers,
                         wins,
                         remaining_bouts,
                         total_bouts,
