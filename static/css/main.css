@@ -64,6 +64,8 @@ table.center {
     border-collapse: collapse;
 }
 
+
+
 th, td {
     border-bottom: 1px solid #dddddd;
     text-align: center;
@@ -147,6 +149,15 @@ h3 {
     color: #060;
 }
 
+.center.about {
+    border-collapse: collapse;
+    border-color: green;
+    border-style: solid;
+}
+
+th.center.about {
+    background-color: #4CAF50;
+}
 
 
 .menu {
