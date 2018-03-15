@@ -2,13 +2,13 @@
 {%block content%}
 {% for weapon in fencers %}
 {% if loop.index % 3 == 1 %}
-<h5>SABRE</h5>
+<h5><b>SABRE</b></h5>
 {% endif %} 
 {% if loop.index % 3 == 2 %}
-<h5>FOIL</h5>
+<h5><b>FOIL</b></h5>
 {% endif %}
 {% if loop.index % 3 == 0 %}
-<h5>EPEE</h5>
+<h5><b>EPEE</b></h5>
 {% endif %}
 <br>
 <table class="center" BORDERCOLOR={{color[0]}}>
@@ -50,4 +50,3 @@
 </table>
 {% endfor %}
 {%endblock%}
-
