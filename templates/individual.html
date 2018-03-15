@@ -15,7 +15,7 @@
         <th BGCOLOR={{color[1]}}>Current Place</th>
         <th BGCOLOR={{color[1]}}>TOP FOUR!</th>
         <th BGCOLOR={{color[1]}}>Name</th>
-        <th BGCOLOR={{color[1]}}>Total Wins</th>
+        <th BGCOLOR={{color[1]}}>Wins/Bouts Fenced</th>
         <th BGCOLOR={{color[1]}}>Win Percentage (Indicator)</th>
         <th BGCOLOR={{color[1]}}>Bouts Remaining</th>
     </tr>
@@ -25,7 +25,7 @@
         <th BGCOLOR={{color[1]}}>Current Place</th>
         <th BGCOLOR={{color[1]}}>5 - 24</th>
         <th BGCOLOR={{color[1]}}>Name</th>
-        <th BGCOLOR={{color[1]}}>Total Wins</th>
+        <th BGCOLOR={{color[1]}}>Wins/Bouts Fenced</th>
         <th BGCOLOR={{color[1]}}>Win Percentage (Indicator)</th>
         <th BGCOLOR={{color[1]}}>Bouts Remaining</th>
     </tr>
@@ -42,7 +42,11 @@
         {% if fencer.has_bouts_remaining %}
         <td>{{fencer.remaining_bouts}}</td>
         {% else %}
-        <td>DONE</td>
+        {% if loop.index <= 4 %}
+            <td BGCOLOR=lightgreen style="font-weight:bold">DONE</td>
+        {% else %}
+            <td BGCOLOR="#FF1A1A" style="font-weight:bold">OUT</td>
+        {% endif %}
         {% endif %}
     </tr>
     {% endfor %}
