@@ -12,9 +12,12 @@ cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 @app.route('/')
 @cache.cached(timeout=300)
 def home():
-    ranking = ResultService.get_current_results()
-    colors = ResultService.get_school_colors()
-    return render_template("home.html", ranking=ranking, color=colors[ranking.first_place.name])
+    try:
+        ranking = ResultService.get_current_results()
+        colors = ResultService.get_school_colors()
+        return render_template("home.html", ranking=ranking, color=colors[ranking.first_place.name])
+    except:
+        return render_template("display.html")
 
 
 @app.route('/about/')
