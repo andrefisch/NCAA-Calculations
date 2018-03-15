@@ -1,24 +1,24 @@
 class Fencer(object):
     def __init__(self,
-                 name,
-                 school,
-                 wins,
-                 bouts_fenced):
+            name,
+            wins,
+            bouts_fenced,
+            indicator,
+            school_logo):
         self.name = name
-        self.school = school
         self.wins = wins
         self.bouts_fenced = bouts_fenced
-
-    def will_finish_higher(self, other_fencer):
-        return (self.wins - other_fencer.wins) > other_fencer.remaining_bouts
-
-    def wins_to_clinch_over(self, other_fencer):
-        return other_fencer.remaining_bouts - (self.wins - other_fencer.wins) + 1
+        self.indicator = indicator
+        self.school_logo = school_logo
 
     @property
     def has_bouts_remaining(self):
-        return self.remaining_bouts > 0
+        return int(self.bouts_fenced) < 23
+
+    @property
+    def remaining_bouts(self):
+        return 23 - int(self.bouts_fenced)
 
     @property
     def win_percent(self):
-        return "{:.1%}".format(float(self.wins) / self.total_bouts)
+        return "{:.1%}".format(float(self.wins) / float(self.bouts_fenced))

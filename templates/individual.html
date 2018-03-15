@@ -1,0 +1,53 @@
+{%extends "layout.html"%}
+{%block content%}
+{% for weapon in fencers %}
+{% if loop.index % 3 == 1 %}
+<h5>SABRE</h5>
+{% endif %} 
+{% if loop.index % 3 == 2 %}
+<h5>FOIL</h5>
+{% endif %}
+{% if loop.index % 3 == 0 %}
+<h5>EPEE</h5>
+{% endif %}
+<br>
+<table class="center" BORDERCOLOR={{color[0]}}>
+    <tr>
+        <th BGCOLOR={{color[1]}}>Current Place</th>
+        <th BGCOLOR={{color[1]}}>TOP FOUR!</th>
+        <th BGCOLOR={{color[1]}}>Name</th>
+        <th BGCOLOR={{color[1]}}>Total Wins</th>
+        <th BGCOLOR={{color[1]}}>Win Percentage (Indicator)</th>
+        <th BGCOLOR={{color[1]}}>Bouts Remaining</th>
+    </tr>
+    {% for fencer in weapon %}
+    {% if loop.index == 5 %}
+    <tr>
+        <th BGCOLOR={{color[1]}}>Current Place</th>
+        <th BGCOLOR={{color[1]}}>5 - 24</th>
+        <th BGCOLOR={{color[1]}}>Name</th>
+        <th BGCOLOR={{color[1]}}>Total Wins</th>
+        <th BGCOLOR={{color[1]}}>Win Percentage (Indicator)</th>
+        <th BGCOLOR={{color[1]}}>Bouts Remaining</th>
+    </tr>
+    {% endif %}
+    <tr>
+        <td>{{loop.index}}.</td>
+        <td><img src="../static/images/small/{{fencer.school_logo}}"
+                 alt=""
+                 style="width:auto; height:75px;"> </td>
+        <td>{{fencer.name}}</td>
+        <td>{{fencer.wins}}/{{fencer.bouts_fenced}}</td>
+        <td>{{fencer.win_percent}} ({{fencer.indicator}})</td>
+
+        {% if fencer.has_bouts_remaining %}
+        <td>{{fencer.remaining_bouts}}</td>
+        {% else %}
+        <td>DONE</td>
+        {% endif %}
+    </tr>
+    {% endfor %}
+</table>
+{% endfor %}
+{%endblock%}
+

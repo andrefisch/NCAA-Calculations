@@ -19,15 +19,15 @@ import random
 
 import scraping_service as ScrapingService
 
-
+year = ""
 # 2016 ARCHIVED VERSION WORKS
 # url = "http://web.archive.org/web/20160325002832/http://www.escrimeresults.com/NCAA/NCAA2016.html"
 # 2017 WORKS
-# url = "https://escrimeresults.com/NCAA/ncaa2017.html"
-# year = url[36:40]
-# 2018 WE WILL SEE
-url = "https://escrimeresults.com/NCAA/ncaa2018.html"
+url = "https://escrimeresults.com/NCAA/ncaa2017.html"
 year = url[36:40]
+# 2018 WE WILL SEE
+# url = "https://escrimeresults.com/NCAA/ncaa2018.html"
+# year = url[36:40]
 
 
 def get_current_results():

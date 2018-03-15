@@ -1,5 +1,6 @@
 Columbia/Barnard;12
 Barnard College;12
+University of Notre Dame;12
 Notre Dame;12
 Ohio State University;12
 Ohio State;12

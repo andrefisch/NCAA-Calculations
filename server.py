@@ -13,12 +13,21 @@ cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 @cache.cached(timeout=300)
 def home():
     try:
-        ranking = ResultService.get_current_results()
+        ranking, fencers = ResultService.get_current_results()
         colors = ResultService.get_school_colors()
         return render_template("home.html", ranking=ranking, color=colors[ranking.first_place.name])
     except:
         return render_template("display.html")
 
+@app.route('/individual/')
+@cache.cached(timeout=300)
+def individual():
+    try:
+        ranking, fencers = ResultService.get_current_results()
+        colors = ResultService.get_school_colors()
+        return render_template("individual.html", fencers=fencers, color=colors[ranking.first_place.name])
+    except:
+        return render_template("display.html")
 
 @app.route('/about/')
 def about():

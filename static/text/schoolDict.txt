@@ -1,4 +1,6 @@
 Columbia/Barnard;COLU
+Columbia;COLU
+Barnard;COLU
 Ohio State University;OSU
 Ohio State;OSU
 Princeton University;PRIN
@@ -7,14 +9,15 @@ St. John's University;STJ
 St. John's;STJ
 Notre Dame;ND
 Pennsylvania State University;PSU
-Penn State;
+Penn State;PSU
 Harvard University;HARV
-Harvard;
+Harvard;HARV
 Pennsylvania, University of;PENN
 University of Pennsylvania;PENN
 Pennsylvania;PENN
 Duke University;DUKE
 Duke;DUKE
+N.J.I.T.;NJIT
 NJ Institute of Technology;NJIT
 N.J. Institute of Technology;NJIT
 New Jersey Institute of Technology;NJIT
@@ -50,8 +53,9 @@ Lawrence;
 Massachusets Institute of Technology;MIT
 M.I.T.;MIT
 Fairleigh Dickinson;FDU
+Fairleigh Dcknsn;FDU
 Detroit Mercy, University of;UDM
 University of Detroit Mercy;UDM
-Detroid Mercy;UDM
+Detroit Mercy;UDM
 Vassar College;VASS
 Vassar;VASS

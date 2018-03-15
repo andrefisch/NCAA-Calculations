@@ -1,4 +1,5 @@
 from school import School
+from fencer import Fencer
 from ranking import Ranking
 
 
@@ -19,9 +20,10 @@ def scrape_site_content_ranking_data(content,
     schools = _get_schools_from_content(content,
                                         school_map,
                                         school_fencers_map)
+    fencers = _get_fencers_from_content(content, school_map)
     ranking = Ranking(schools, year)
 
-    return ranking
+    return (ranking, fencers)
 
 def _has_content(content):
     return len(content[COMBINED_TABLE]) > 2
@@ -55,3 +57,32 @@ def _get_schools_from_content(content,
         schools.append(school)
 
     return schools
+
+def _get_fencers_from_content(content, school_map):
+    fencers = []
+    for j in range (0, len(content) - 2):
+        weapon = []
+        for i in range (1, len(content[j][2])):
+            name = str(content[j][2][i])
+            school_name = str(content[j][3][i])
+            if school_name in school_map:
+                school_logo = "%s.png" % school_map[school_name]
+            else:
+                school_logo = "NCAA.png"
+            try:
+                wins, bouts_fenced = str(content[j][4][i]).split('/')
+            except:
+                break
+            indicator = str(content[j][8][i])
+
+            fencer = Fencer(name,
+                            wins,
+                            bouts_fenced,
+                            indicator,
+                            school_logo)
+
+            # fencers.append(fencer)
+            weapon.append(fencer)
+        fencers.append(weapon)
+
+    return [x for x in fencers if x != []]
