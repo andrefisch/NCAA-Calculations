@@ -1,5 +1,37 @@
 {%extends "layout.html"%}
 {%block content%}
-<iframe class="display" src="http://free.timeanddate.com/countdown/i65jx3xc/n179/cf13/cm0/cu4/ct0/cs1/ca0/cr0/ss0/cac000/cpc000/pcf90/tcf90/fs250/szw700/szh295/tatNCAA%20Fencing%20Championships/tac000/tpc000/matAt%20Penn%20State%20Start%20In%3A/mac000/mpc000/iso2018-03-21T09:00:00" allowTransparency="true" frameborder="0" width="1279" height="594"></iframe>
+<h4><span class="s1"><b>NCAA Fencing Championships</b></span></h4>
+<h4><span class="s1"><b>At Penn State Start In:</b></span></h4>
+<p id="demo"></p>
 <iframe class="display" width="1279" height="720" src="https://www.youtube.com/embed/xYL8GFZCVls" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Mar 21, 2018 09:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+    // If the count down is finished, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
 {%endblock%}
