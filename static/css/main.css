@@ -153,13 +153,14 @@ h3 {
 h4 {
     font-size: 5em;
     font-weight: 100;
+    margin-top: -15px;
     text-align: center;
     letter-spacing: -1px;
     color: black;
 }
 
 #demo {
-    font-size: 10em;
+    font-size: 5em;
     text-align: center;
     color: black;
 }
