@@ -29,7 +29,7 @@ body {
 
 header {
     background-color: #DFB887;
-    height: 35px;
+    height: 50px;
     width: 100%;
     opacity: .9;
     margin-bottom: 10px;
@@ -42,9 +42,18 @@ header h1.logo {
     text-transform: uppercase;
     float: left;
     margin-left: 8px;
-    margin-top: 2px;
+    margin-top: 4px;
 }
 
+header h1.logo2 {
+    margin: 0;
+    font-size: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    float: left;
+    margin-left: 8px;
+    margin-top: 4px;
+}
 
 
 header h1.logo:hover {
@@ -205,6 +214,38 @@ h4 {
 
 
 .menu li a:hover {
+    color: #666;
+    text-decoration: none;
+}
+
+.menu2 {
+    float: right;
+    margin-top: 9px;
+    margin-right: 8px;
+}
+
+
+
+.menu2 li {
+    display: inline;
+}
+
+
+
+.menu2 li + li {
+    margin-left: 35px;
+}
+
+
+
+.menu2 li a {
+    color: #444;
+    text-decoration: none;
+}
+
+
+
+.menu2 li a:hover {
     color: #666;
     text-decoration: none;
 }
