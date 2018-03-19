@@ -23,6 +23,10 @@ N.J. Institute of Technology;NJIT
 New Jersey Institute of Technology;NJIT
 Stanford University;STAN
 Stanford;STAN
+Johns Hopkins;JHU
+John's Hopkins;JHU
+Johns Hopkins University;JHU
+John's Hopkins University;JHU
 Northwestern University;NW
 Northwestern;NW
 New York University;NYU

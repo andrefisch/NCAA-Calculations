@@ -1,8 +1,40 @@
 {%extends "layout.html"%}
 {%block content%}
+<br>
 <h4><span class="s1"><b>NCAA Fencing Championships<br/>At Penn State Start In:</b></span></h4>
 <p id="demo"></p>
 <iframe class="display" width="940" height="526" src="https://www.youtube.com/embed/xYL8GFZCVls" allowfullscreen></iframe>
+<br>
+<br>
+<br>
+<br>
+<h3><b>Total Fencers Per School</b></span></h3>
+<table class="center about">
+    <tr>
+        <th class="green">Schools with 12 Fencers</th>
+        <th class="green"></th>
+        <th class="green">Number of Fencers</th>
+        <th class="green">Total Bouts</th>
+    </tr>
+    {% for school in schools %}
+    {% if loop.index == 4 %}
+    <tr>
+        <th class="green">Schools with less than 12 Fencers</th>
+        <th class="green"></th>
+        <th class="green">Number of Fencers</th>
+        <th class="green">Total Bouts</th>
+    </tr>
+    {% endif %}
+    <tr>
+        <td>{{school.name}}</td>
+        <td><img src="../static/images/small/{{school.school_logo}}"
+                 alt=""
+                 style="width:auto; height:75px;"> </td>
+        <td>{{school.num_fencers}}</td>
+        <td>{{school.total_bouts}}</td>
+    </tr>
+    {% endfor %}
+</table>
 <script>
 // Set the date we're counting down to
 var countDownDate = new Date("Mar 22, 2018 09:00:00").getTime();

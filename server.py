@@ -17,7 +17,8 @@ def home():
         colors = ResultService.get_school_colors()
         return render_template("home.html", ranking=ranking, color=colors[ranking.first_place.name])
     except:
-        return render_template("display.html")
+        schools = ResultService.get_fencer_numbers()
+        return render_template("display.html", schools=schools)
 
 @app.route('/individual/')
 @cache.cached(timeout=300)
