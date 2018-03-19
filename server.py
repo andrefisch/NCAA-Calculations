@@ -28,7 +28,8 @@ def individual():
         colors = ResultService.get_school_colors()
         return render_template("individual.html", fencers=fencers, color=colors[ranking.first_place.name])
     except:
-        return render_template("display.html")
+        schools = ResultService.get_fencer_numbers()
+        return render_template("display.html", schools=schools)
 
 @app.route('/about/')
 def about():
