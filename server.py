@@ -10,7 +10,7 @@ app = Flask(__name__)
 cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 
 @app.route('/')
-@cache.cached(timeout=300)
+@cache.cached(timeout=150)
 def home():
     try:
         ranking, fencers = ResultService.get_current_results()
@@ -21,7 +21,7 @@ def home():
         return render_template("display.html", schools=schools)
 
 @app.route('/individual/')
-@cache.cached(timeout=300)
+@cache.cached(timeout=150)
 def individual():
     try:
         ranking, fencers = ResultService.get_current_results()
