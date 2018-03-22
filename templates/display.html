@@ -56,10 +56,10 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
 
-    // If the count down is finished, write some text 
+    // If the count down is finished, write some text
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("demo").innerHTML = "NCAA's is underway, updates coming soon!";
+        document.getElementById("demo").innerHTML = "NCAAs are underway; updates coming soon!";
     }
 }, 1000);
 </script>
