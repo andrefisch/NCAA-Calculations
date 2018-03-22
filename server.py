@@ -13,7 +13,7 @@ cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 @cache.cached(timeout=150)
 def home():
     try:
-        ranking, fencers = ResultService.get_current_results()
+        ranking, fencers, weapons = ResultService.get_current_results()
         colors = ResultService.get_school_colors()
         return render_template("home.html", ranking=ranking, color=colors[ranking.first_place.name])
     except:
@@ -24,11 +24,11 @@ def home():
 @cache.cached(timeout=150)
 def individual():
     try:
-        ranking, fencers = ResultService.get_current_results()
+        ranking, fencers, weapons = ResultService.get_current_results()
         colors = ResultService.get_school_colors()
-        return render_template("individual.html", fencers=fencers, color=colors[ranking.first_place.name])
+        return render_template("individual.html", fencers=fencers, weapons=weapons, color=colors[ranking.first_place.name])
     except:
-        schools = ResultService.get_fencer_numbers()
+        schools = resultservice.get_fencer_numbers()
         return render_template("display.html", schools=schools)
 
 @app.route('/about/')
