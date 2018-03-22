@@ -87,7 +87,7 @@ def _get_fencers_from_content(content, school_map):
             except:
                 break
             indicator = str(content[j][8][i])[:-2]
-            if (int(indicator >= 0)):
+            if (indicator != "" and indicator[0] != '-'):
                 indicator = "+" + indicator
 
             fencer = Fencer(name,
