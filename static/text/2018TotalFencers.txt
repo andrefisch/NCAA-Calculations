@@ -8,9 +8,9 @@ Harvard University;10
 Harvard;10
 Pennsylvania State University;10
 Penn State;10
-University of Pennsylvania;10
+University of Pennsylvania;9
 Pennsylvania, University of;9
-Pennsylvania;10
+Pennsylvania;9
 Princeton University;9
 Princeton;9
 St. John's University;9

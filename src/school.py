@@ -25,4 +25,5 @@ class School(object):
 
     @property
     def win_percent(self):
+        # print (self.name, self.wins, self.total_bouts, self.remaining_bouts)
         return "{:.1%}".format(float(self.wins) / (self.total_bouts - self.remaining_bouts))
