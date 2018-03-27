@@ -67,16 +67,16 @@ def _get_fencers_from_content(content, school_map):
             name = str(content[j][2][i])
             if (name == "Sylvie Binder"):
                 weapons.append("WOMEN'S FOIL")
-            elif (name == "Lena Johnson"):
+            elif (name == "Maia Chamberlain"):
                 weapons.append("WOMEN'S SABRE")
-            elif (name == "Katie Angen"):
+            elif (name == "Amanda Sirico"):
                 weapons.append("WOMEN'S EPEE")
-            elif (name == "Eli Dershwitz"):
+            elif (name == "Fares Ferjani"):
                 weapons.append("MEN'S SABRE")
             elif (name == "Sam Moelis"):
                 weapons.append("MEN'S FOIL")
-            elif (name == "Porter Hesslegrave"):
-                weapons.append("MEN's EPEE")
+            elif (name == "Sean White"):
+                weapons.append("MEN'S EPEE")
             school_name = str(content[j][3][i])
             if school_name in school_map:
                 school_logo = "%s.png" % school_map[school_name]
