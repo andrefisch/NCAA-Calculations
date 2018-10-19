@@ -48,6 +48,10 @@ def about():
     elijah = random.choice(elijahList)
     return render_template("about.html", andrew=andrew, elijah=elijah)
 
+@app.route('/moneyball/')
+def moneyball():
+    return render_template("moneyball.html")
+
 
 if __name__ == "__main__":
     app.run(debug = True)
