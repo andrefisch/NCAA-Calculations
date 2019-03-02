@@ -9,6 +9,29 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-96011999-1', 'auto');
 ga('send', 'pageview');
 
+function dropdown() {
+    var x = document.getElementById("dropdown")
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  };
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("social_media");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
     </script>
     <head>
         <title>CyrusofChaos - NCAA Fencing Calculations</title>
@@ -26,18 +49,16 @@ ga('send', 'pageview');
                             <li><a href="{{ url_for('individual') }}">Individual</a></li>
                             <li><a href="{{ url_for('about') }}">About/Schedule</a></li>
                             <li><a href="{{ url_for('moneyball') }}">Moneyball</a></li>
-                        </ul>
-                </nav></strong>
-            </div>
-        </header>
-        <header>
-            <div class="container">
-                <h1 class="logo2">CyrusofChaos</h1>
-                <strong><nav>
-                        <ul class="menu2">
-                            <li><a href="http://www.youtube.com/user/CyrusofChaos">YouTube</a></li>
-                            <li><a href="https://www.facebook.com/CyrusofChaos/">Facebook</a></li>
-                            <li><a href="http://www.instagram.com/cyrusofchaos">Instagram</a></li>
+                            <li class = "dropdown_menu">
+                                <button onclick="dropdown()" class="dropbtn">&#9776;</button> 
+                                <strong><nav>
+                                        <ul id = "dropdown" class="social_media menu2">
+                                            <li><a href="http://www.youtube.com/user/CyrusofChaos">YouTube</a></li>
+                                            <li><a href="https://www.facebook.com/CyrusofChaos/">Facebook</a></li>
+                                            <li><a href="http://www.instagram.com/cyrusofchaos">Instagram</a></li>
+                                        </ul>
+                                </nav></strong>
+                            </li>
                         </ul>
                 </nav></strong>
             </div>
