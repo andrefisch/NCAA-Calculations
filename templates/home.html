@@ -2,29 +2,25 @@
 {%block content%}
 <table class="center" BORDERCOLOR={{color[0]}}>
     <tr>
-        <th BGCOLOR={{color[1]}}>Current Place</th>
         <th BGCOLOR={{color[1]}}></th>
         <th BGCOLOR={{color[1]}}>Current Leader (Fencers)</th>
         <th BGCOLOR={{color[1]}}>Total Wins</th>
-        <th BGCOLOR={{color[1]}}>Win Percentage</th>
+        <!--<th BGCOLOR={{color[1]}}>Win Percentage</th>-->
         <th BGCOLOR={{color[1]}}>Bouts Remaining</th>
-        <th BGCOLOR={{color[1]}}>Bouts Needed to Clinch</th>
+        <th BGCOLOR={{color[1]}}>Bouts to Clinch</th>
     </tr>
     <tr>
-        <td>1</td>
         <td><img src="../static/images/small/{{ranking.first_place.school_logo}}"
                  alt=""
                  style="width:auto; height:75px;"> </td>
-        <td>{{ranking.first_place.name}} ({{ranking.first_place.num_fencers}})</td>
+        <td>1. {{ranking.first_place.name}} ({{ranking.first_place.num_fencers}})</td>
         <td>{{ranking.first_place.wins}}</td>
-        <td>{{ranking.first_place.win_percent}}</td>
-
+        <!--<td>{{ranking.first_place.win_percent}}</td>-->
         {% if ranking.first_place.has_bouts_remaining %}
         <td>{{ranking.first_place.remaining_bouts}}</td>
         {% else %}
         <td>DONE</td>
         {% endif %}
-
         {% if ranking.is_over %}
         <td>WINNER OF THE {{ranking.year}} FENCING CHAMPIONSHIP!</td>
         {% elif ranking.leader_can_clinch %}
@@ -37,23 +33,21 @@
         {% endif %}
     </tr>
     <tr>
-        <th BGCOLOR={{color[1]}}>Current Place</th>
         <th BGCOLOR={{color[1]}}></th>
         <th BGCOLOR={{color[1]}}>School (Fencers)</th>
         <th BGCOLOR={{color[1]}}>Total Wins</th>
-        <th BGCOLOR={{color[1]}}>Win Percentage</th>
+        <!--<th BGCOLOR={{color[1]}}>Win Percentage</th>-->
         <th BGCOLOR={{color[1]}}>Bouts Remaining</th>
         <th BGCOLOR={{color[1]}}>Bouts Behind Leader</th>
     </tr>
     {% for school in ranking.trailing_schools %}
     <tr>
-        <td>{{loop.index + 1}}.</td>
         <td><img src="../static/images/small/{{school.school_logo}}"
                  alt=""
                  style="width:auto; height:75px;"> </td>
-        <td>{{school.name}} ({{school.num_fencers}})</td>
+        <td>{{loop.index + 1}}. {{school.name}} ({{school.num_fencers}})</td>
         <td>{{school.wins}}</td>
-        <td>{{school.win_percent}}</td>
+        <!--<td>{{school.win_percent}}</td>-->
 
         {% if school.has_bouts_remaining %}
         <td>{{school.remaining_bouts}}</td>
