@@ -1,3 +1,15 @@
+@font-face {
+    font-family: ncaa-illinois;
+    src:
+         url("/static/fonts/NCAA\ Illinois\ Fighting\ Illini.otf") format("opentype")
+}
+
+@font-face {
+    font-family: ncaa-illinois;
+    font-weight: bold;
+    src: url("/static/fonts/NCAA_Illinois_Fighting\ IlliniBold.otf") format("opentype");
+}
+
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: left;
@@ -5,6 +17,17 @@ body {
     width: calc(100% - 16px);
     margin:8px;
     top:45px;
+}
+
+.ncaa-banner{
+    font-family: ncaa-illinois, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-weight: bold;
+    font-style: italic;
+    font-size:3em;
+}
+
+.year_banner{
+    font-size:0.8em;
 }
 
 
@@ -91,8 +114,6 @@ td{
 }
 
 th {
-    /*background-color: #0C2340;*/
-    background-color:#3265AE;
     color: white;
 }
 
@@ -168,6 +189,8 @@ h5 {
     text-align: center;
     letter-spacing: -1px;
     color: black;
+    font-style: italic;
+    font-family: ncaa-illinois, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #demo {
@@ -179,14 +202,8 @@ h5 {
 
 .center.about {
     border-collapse: collapse;
-    border-color: #3265AE;
     border-style: solid;
 }
-
-.green {
-    background-color: #2C385C;
-}
-
 
 .menu {
     float: right;
@@ -260,10 +277,6 @@ h5 {
     top: 0;
     left: 0;
     right: 0;
-}
-
-.ncaa-img{
-    width: 100%;
 }
 
 
@@ -353,6 +366,10 @@ h5{
 
     h5{
         font-size:2em;
+    }
+
+    .ncaa-banner{
+        font-size:1.2em;
     }
 
   }

@@ -33,6 +33,13 @@ def individual():
 
 @app.route('/about/')
 def about():
+    try:
+        ranking, fencers, weapons = ResultService.get_current_results()
+        colors = ResultService.get_school_colors()
+        return render_template("about.html", fencers=fencers, weapons=weapons, color=colors[ranking.first_place.name])
+    except:
+        schools = resultservice.get_fencer_numbers()
+        return render_template("display.html", schools=schools)
     # Import list of Andrew quips
     andrewList = []
     with open("./static/text/andrewList.txt") as f:
@@ -50,7 +57,13 @@ def about():
 
 @app.route('/moneyball/')
 def moneyball():
-    return render_template("moneyball.html")
+    try:
+        ranking, fencers, weapons = ResultService.get_current_results()
+        colors = ResultService.get_school_colors()
+        return render_template("moneyball.html", fencers=fencers, weapons=weapons, color=colors[ranking.first_place.name])
+    except:
+        schools = resultservice.get_fencer_numbers()
+        return render_template("display.html", schools=schools)
 
 
 if __name__ == "__main__":
