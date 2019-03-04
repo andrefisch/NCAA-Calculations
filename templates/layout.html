@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -9,61 +10,55 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-96011999-1', 'auto');
 ga('send', 'pageview');
 
-function dropdown() {
-    var x = document.getElementById("dropdown")
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  };
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("social_media");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-
     </script>
     <head>
         <title>CyrusofChaos - NCAA Fencing Calculations</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
         <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     </head>
     <br>
     <body>
+
+
         <header>
-            <div class="container">
-                <h1 class="logo">FENCING MATH - NCAA Calculations</h1>
-                <strong><nav>
-                        <ul class="menu">
-                            <li><a href="{{ url_for('home') }}">Team</a></li>
-                            <li><a href="{{ url_for('individual') }}">Individual</a></li>
-                            <li><a href="{{ url_for('about') }}">About/Schedule</a></li>
-                            <li><a href="{{ url_for('moneyball') }}">Moneyball</a></li>
-                            <li class = "dropdown_menu">
-                                <button onclick="dropdown()" class="dropbtn">&#9776;</button> 
-                                <strong><nav>
-                                        <ul id = "dropdown" class="social_media menu2">
-                                            <li><a href="http://www.youtube.com/user/CyrusofChaos">YouTube</a></li>
-                                            <li><a href="https://www.facebook.com/CyrusofChaos/">Facebook</a></li>
-                                            <li><a href="http://www.instagram.com/cyrusofchaos">Instagram</a></li>
-                                        </ul>
-                                </nav></strong>
-                            </li>
-                        </ul>
-                </nav></strong>
-            </div>
+            <nav class = "navbar navbar-expand-lg mobile">
+                <div class = "title">
+                    <span class = "math">Fencing Math</span>
+                    <span class = "desktop">- CyrusOfChaos</span>
+                </div>
+                <div id = "weapon" class="dropdown" style="display:none">
+                        <button class="dropbtn">Weapon</button>
+                        <div class="dropdown-content">
+                            {% for weapon in fencers %}
+                            <a href="{{ url_for('individual') }}#{{weapons[loop.index - 1]}}">{{weapons[loop.index - 1]}}</a>
+                            {% endfor %} 
+                        </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Links</button>
+                    <div class="dropdown-content">
+                        <a href="{{ url_for('home') }}">Team</a>
+                        <a href="{{ url_for('individual') }}">Individual</a>
+                        <a href="{{ url_for('about') }}">About/Schedule</a>
+                        <a href="{{ url_for('moneyball') }}">Moneyball</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Media</button>
+                    <div class="dropdown-content">
+                        <a href="http://www.youtube.com/user/CyrusofChaos">YouTube</a>
+                        <a href="https://www.facebook.com/CyrusofChaos/">Facebook</a>
+                        <a href="http://www.instagram.com/cyrusofchaos">Instagram</a>
+                    </div>
+                </div>
+            </nav>
         </header>
-        <p class="banner" style="text-align:center;"><img src="{{url_for('static', filename='images/small/banner18.png')}}" width="90%" alt=""/></p>
+        <div class="ncaa-banner">
+            <div class="container">
+                <img class="ncaa-img" src="../static/images/small/banner18.png">
+            </div>
+        </div>
         <div class="container">
             {%block content%}
             {%endblock%}

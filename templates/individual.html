@@ -1,43 +1,51 @@
 {%extends "layout.html"%}
 {%block content%}
+
+<style> #weapon{display:inline-block !important;}
+        @media only screen and (max-width: 600px){
+            .math{display:none !important}
+            .navbar{justify-content: space-around;}
+            .title{display:none;}
+            #weapon *{left:0;}
+        }
+</style>
+
 {% for weapon in fencers %}
-<h5><b>{{weapons[loop.index - 1]}}</b></h5>
-<table class="center" BORDERCOLOR={{color[0]}}>
+
+<h5 id = "{{weapons[loop.index - 1]}}"><b>{{weapons[loop.index - 1]}}</b></h5>
+<table class="table">
     <tr>
-        <th BGCOLOR={{color[1]}}>Current Place</th>
-        <th BGCOLOR={{color[1]}}>TOP FOUR!</th>
-        <th BGCOLOR={{color[1]}}>Name</th>
-        <th BGCOLOR={{color[1]}}>Wins/Bouts Fenced</th>
-        <th BGCOLOR={{color[1]}}>Win Percentage (Indicator)</th>
-        <th BGCOLOR={{color[1]}}>Bouts Remaining</th>
+        <th BGCOLOR={{color[1]}}>1-4</th>
+        <th BGCOLOR={{color[1]}}>Fencer</th>
+        <th BGCOLOR={{color[1]}}>Wins/ Bouts Fenced</th>
+        <th class="desktop" BGCOLOR={{color[1]}}>Win Percentage (Indicator)</th>
+        <th BGCOLOR={{color[1]}}>Bouts Left</th>
     </tr>
     {% for fencer in weapon %}
     {% if loop.index == 5 %}
     <tr>
-        <th BGCOLOR={{color[1]}}>Current Place</th>
         <th BGCOLOR={{color[1]}}>5 - 24</th>
-        <th BGCOLOR={{color[1]}}>Name</th>
-        <th BGCOLOR={{color[1]}}>Wins/Bouts Fenced</th>
-        <th BGCOLOR={{color[1]}}>Win Percentage (Indicator)</th>
-        <th BGCOLOR={{color[1]}}>Bouts Remaining</th>
+        <th BGCOLOR={{color[1]}}>Fencer</th>
+        <th BGCOLOR={{color[1]}}>Wins/ Bouts Fenced</th>
+        <th class="desktop" BGCOLOR={{color[1]}}>Win Percentage (Indicator)</th>
+        <th BGCOLOR={{color[1]}}>Bouts Left</th>
     </tr>
     {% endif %}
     <tr>
         <td>{{loop.index}}.</td>
         <td><img src="../static/images/small/{{fencer.school_logo}}"
                  alt=""
-                 style="width:auto; height:75px;"> </td>
-        <td>{{fencer.name}}</td>
+                 style="width:auto; height:50px;"> <br>{{fencer.name}}</td>
         <td>{{fencer.wins}}/{{fencer.bouts_fenced}}</td>
-        <td>{{fencer.win_percent}} ({{fencer.indicator}})</td>
+        <td class="desktop">{{fencer.win_percent}} ({{fencer.indicator}})</td>
 
         {% if fencer.has_bouts_remaining %}
         <td>{{fencer.remaining_bouts}}</td>
         {% else %}
         {% if loop.index <= 4 %}
-            <td BGCOLOR=lightgreen style="font-weight:bold">DONE</td>
+            <td BGCOLOR=lightgreen style="font-weight:bold">Done</td>
         {% else %}
-            <td BGCOLOR="#FF1A1A" style="font-weight:bold">OUT</td>
+            <td BGCOLOR="#FF1A1A" style="font-weight:bold">Out</td>
         {% endif %}
         {% endif %}
     </tr>
