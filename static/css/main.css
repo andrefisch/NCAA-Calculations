@@ -319,7 +319,7 @@ h5 {
 }
 
 .dropdown:hover .dropbtn {
-    background-color: #3265AE;
+    filter: brightness(150%);
 }
 
 .title{

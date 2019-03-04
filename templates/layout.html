@@ -27,7 +27,7 @@ ga('send', 'pageview');
                     <span class = "math">Fencing Math</span>
                     <span class = "desktop">- CyrusOfChaos</span>
                 </div>
-                <div id = "weapon" class="dropdown" style="display:none">
+                <div id = "weapon" class="dropdown" style="display:none" style="background-color:#{{color[1]}}">
                         <button class="dropbtn">Weapon</button>
                         <div class="dropdown-content">
                             {% for weapon in fencers %}
@@ -36,7 +36,7 @@ ga('send', 'pageview');
                         </div>
                 </div>
                 <div class="dropdown">
-                    <button class="dropbtn">Links</button>
+                    <button class="dropbtn" style="background-color:#{{color[1]}}">Links</button>
                     <div class="dropdown-content">
                         <a href="{{ url_for('home') }}">Team</a>
                         <a href="{{ url_for('individual') }}">Individual</a>
@@ -45,7 +45,7 @@ ga('send', 'pageview');
                     </div>
                 </div>
                 <div class="dropdown">
-                    <button class="dropbtn">Media</button>
+                    <button class="dropbtn" style="background-color:#{{color[1]}}">Media</button>
                     <div class="dropdown-content">
                         <a href="http://www.youtube.com/user/CyrusofChaos">YouTube</a>
                         <a href="https://www.facebook.com/CyrusofChaos/">Facebook</a>
