@@ -29,7 +29,7 @@ class Ranking(object):
 
     @property
     def leader_can_clinch(self):
-        return self.bouts_leader_needs_to_clinch < self.first_place.remaining_bouts
+        return self.bouts_leader_needs_to_clinch <= self.first_place.remaining_bouts
 
     @property
     def bouts_leader_needs_to_clinch(self):

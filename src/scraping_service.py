@@ -20,10 +20,10 @@ def scrape_site_content_ranking_data(content,
     schools = _get_schools_from_content(content,
                                         school_map,
                                         school_fencers_map)
-    fencers = _get_fencers_from_content(content, school_map)
+    fencers, weapons = _get_fencers_from_content(content, school_map)
     ranking = Ranking(schools, year)
 
-    return (ranking, fencers)
+    return (ranking, fencers, weapons)
 
 def _has_content(content):
     return len(content[COMBINED_TABLE]) > 2
@@ -60,10 +60,23 @@ def _get_schools_from_content(content,
 
 def _get_fencers_from_content(content, school_map):
     fencers = []
+    weapons = []
     for j in range (0, len(content) - 2):
         weapon = []
         for i in range (1, len(content[j][2])):
             name = str(content[j][2][i])
+            if (name == "Sylvie Binder"):
+                weapons.append("WOMEN'S FOIL")
+            elif (name == "Maia Chamberlain"):
+                weapons.append("WOMEN'S SABRE")
+            elif (name == "Amanda Sirico"):
+                weapons.append("WOMEN'S EPEE")
+            elif (name == "Fares Ferjani"):
+                weapons.append("MEN'S SABRE")
+            elif (name == "Sam Moelis"):
+                weapons.append("MEN'S FOIL")
+            elif (name == "Sean White"):
+                weapons.append("MEN'S EPEE")
             school_name = str(content[j][3][i])
             if school_name in school_map:
                 school_logo = "%s.png" % school_map[school_name]
@@ -74,7 +87,7 @@ def _get_fencers_from_content(content, school_map):
             except:
                 break
             indicator = str(content[j][8][i])[:-2]
-            if (int(indicator >= 0)):
+            if (indicator != "" and indicator[0] != '-'):
                 indicator = "+" + indicator
 
             fencer = Fencer(name,
@@ -87,4 +100,4 @@ def _get_fencers_from_content(content, school_map):
             weapon.append(fencer)
         fencers.append(weapon)
 
-    return [x for x in fencers if x != []]
+    return [x for x in fencers if x != []], weapons

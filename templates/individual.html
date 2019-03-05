@@ -1,15 +1,7 @@
 {%extends "layout.html"%}
 {%block content%}
 {% for weapon in fencers %}
-{% if loop.index % 3 == 1 %}
-<h5><b>SABRE</b></h5>
-{% endif %} 
-{% if loop.index % 3 == 2 %}
-<h5><b>FOIL</b></h5>
-{% endif %}
-{% if loop.index % 3 == 0 %}
-<h5><b>EPEE</b></h5>
-{% endif %}
+<h5><b>{{weapons[loop.index - 1]}}</b></h5>
 <table class="center" BORDERCOLOR={{color[0]}}>
     <tr>
         <th BGCOLOR={{color[1]}}>Current Place</th>
