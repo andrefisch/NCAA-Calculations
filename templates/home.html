@@ -1,7 +1,7 @@
 {%extends "layout.html"%}
 {%block content%}
 
-<table class="table" style="margin-top:50px;">
+<table class="table" style="margin-top:50px; border:2px solid #{{color[1]}}">
         <tr>
             <th BGCOLOR={{color[0]}}></th>
             <th BGCOLOR={{color[0]}}>School</th>
@@ -22,7 +22,7 @@
             <td>{{ranking.first_place.remaining_bouts}}</td>
     
             {% if ranking.is_over %}
-            <td>{{ranking.year}}<br>Team Champions!</td>
+            <td class = "winner">{{ranking.year}}<br>Team Champions!</td>
             {% elif ranking.leader_can_clinch %}
             <td>
                 {{ranking.bouts_leader_needs_to_clinch}}
@@ -57,7 +57,7 @@
             {% if not ranking.is_school_out(school) %}
             <td>{{ranking.bouts_behind_leader(school)}}</td>
             {% else %}
-            <td class="out">{{ranking.bouts_behind_leader(school)}}</td>
+            <td class="out">{{ranking.bouts_behind_leader(school)}}<br> Out</td>
             {% endif %}
         </tr>
         {% endfor %}

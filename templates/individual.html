@@ -13,7 +13,7 @@
 {% for weapon in fencers %}
 
 <h5 id = "{{weapons[loop.index - 1]}}" style="color:#{{color[1]}}"><b>{{weapons[loop.index - 1]}}</b></h5>
-<table class="table">
+<table class="table" style="border:2px solid #{{color[1]}}"">
     <tr>
         <th BGCOLOR={{color[0]}}>1 - 4</th>
         <th BGCOLOR={{color[0]}}>Fencer</th>
@@ -43,9 +43,9 @@
         <td>{{fencer.remaining_bouts}}</td>
         {% else %}
         {% if loop.index <= 4 %}
-            <td BGCOLOR=lightgreen style="font-weight:bold">Done</td>
+            <td class="winner">Done</td>
         {% else %}
-            <td BGCOLOR="#FF1A1A" style="font-weight:bold">Out</td>
+            <td class="out">Out</td>
         {% endif %}
         {% endif %}
     </tr>

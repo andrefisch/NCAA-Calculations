@@ -104,26 +104,27 @@ table.center {
     border-collapse: collapse;
 }
 
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: middle;
+    border-top: 1px solid #dee2e6;
+}
 
 
 th, td {
     border-bottom: 1px solid #dddddd;
     text-align: center;
-    vertical-align: middle;
     padding: 15px;
+    vertical-align: middle;
     font-weight: normal;
 }
 
-td{
-    background-color:white;
-}
-
 th {
-    color: white;
+    color: white; 
 }
 
 tr:nth-child(odd) {
-    background-color: #f2f2f2;
+    background-color: rgb(244, 244, 244);
 }
 
 .cublue {
@@ -337,7 +338,11 @@ h5 {
 }
 
 .out{
-    background-color:lightgray;
+    background-color:rgb(255, 100, 100);
+}
+
+.winner{
+    background-color: rgb(159, 249, 185);
 }
 
 h5{
