@@ -12,34 +12,40 @@ cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 @app.route('/')
 @cache.cached(timeout=150)
 def home():
+    year = ResultService.year
     try:
         ranking, fencers, weapons = ResultService.get_current_results()
         colors = ResultService.get_school_colors()
-        return render_template("home.html", ranking=ranking, color=colors[ranking.first_place.name])
+        return render_template("home.html", ranking=ranking, color=colors[ranking.first_place.name], year=year)
     except:
+        print("Error loading HOME page")
         schools = ResultService.get_fencer_numbers()
-        return render_template("display.html", schools=schools)
+        return render_template("display.html", schools=schools, year=year)
 
 @app.route('/individual/')
 @cache.cached(timeout=150)
 def individual():
+    year = ResultService.year
     try:
         ranking, fencers, weapons = ResultService.get_current_results()
         colors = ResultService.get_school_colors()
-        return render_template("individual.html", fencers=fencers, weapons=weapons, color=colors[ranking.first_place.name])
+        return render_template("individual.html", fencers=fencers, weapons=weapons, color=colors[ranking.first_place.name], year=year)
     except:
-        schools = resultservice.get_fencer_numbers()
-        return render_template("display.html", schools=schools)
+        print("Error loading INDIVIDUAL page")
+        schools = ResultService.get_fencer_numbers()
+        return render_template("display.html", schools=schools, year=year)
 
 @app.route('/about/')
 def about():
+    year = ResultService.year
     try:
         ranking, fencers, weapons = ResultService.get_current_results()
         colors = ResultService.get_school_colors()
-        return render_template("about.html", fencers=fencers, weapons=weapons, color=colors[ranking.first_place.name])
+        return render_template("about.html", fencers=fencers, weapons=weapons, color=colors[ranking.first_place.name], year=year)
     except:
-        schools = resultservice.get_fencer_numbers()
-        return render_template("display.html", schools=schools)
+        print("Error loading ABOUT page")
+        schools = ResultService.get_fencer_numbers()
+        return render_template("display.html", schools=schools, year=year)
     # Import list of Andrew quips
     andrewList = []
     with open("./static/text/andrewList.txt") as f:

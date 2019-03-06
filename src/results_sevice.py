@@ -29,7 +29,8 @@ year = ""
 # 2018 WE WILL SEE
 url = "https://escrimeresults.com/NCAA/ncaa2018.html"
 
-year = url[36:40]
+# year = url[36:40]
+year = url[-9:-5]
 
 
 def get_current_results():

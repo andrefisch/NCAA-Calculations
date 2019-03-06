@@ -41,7 +41,7 @@ ga('send', 'pageview');
                         <a href="{{ url_for('home') }}">Team</a>
                         <a href="{{ url_for('individual') }}">Individual</a>
                         <a href="{{ url_for('about') }}">About/Schedule</a>
-                        <a href="{{ url_for('moneyball') }}">Moneyball</a>
+                        <!--<a href="{{ url_for('moneyball') }}">Moneyball</a>-->
                     </div>
                 </div>
                 <div class="dropdown">
@@ -56,7 +56,7 @@ ga('send', 'pageview');
         </header>
         <div class="ncaa-banner">
             <div class="container">
-                <div class = "year_banner" style="color:#{{color[0]}}">2019 National Collegiate</div>
+                <div class = "year_banner" style="color:#{{color[0]}}">{{year}} National Collegiate</div>
                 <div class = "championship_banner" style="color:#{{color[1]}}">Fencing Championships</div>
             </div>
         </div>
