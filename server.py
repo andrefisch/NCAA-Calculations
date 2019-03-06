@@ -41,25 +41,25 @@ def about():
     try:
         ranking, fencers, weapons = ResultService.get_current_results()
         colors = ResultService.get_school_colors()
-        return render_template("about.html", fencers=fencers, weapons=weapons, color=colors[ranking.first_place.name], year=year)
+        # Import list of Andrew quips
+        andrewList = []
+        with open("./static/text/andrewList.txt") as f:
+            for line in f:
+                andrewList.append(line.strip('\n'))
+        # Import list of Elijah quips
+        elijahList = []
+        with open("./static/text/elijahList.txt") as f:
+            for line in f:
+                elijahList.append(line.strip('\n'))
+
+        andrew = random.choice(andrewList)
+        elijah = random.choice(elijahList)
+        # return render_template("about.html", andrew=andrew, elijah=elijah)
+        return render_template("about.html", color=colors[ranking.first_place.name], year=year, andrew=andrew, elijah=elijah)
     except:
         print("Error loading ABOUT page")
         schools = ResultService.get_fencer_numbers()
         return render_template("display.html", schools=schools, year=year)
-    # Import list of Andrew quips
-    andrewList = []
-    with open("./static/text/andrewList.txt") as f:
-        for line in f:
-            andrewList.append(line.strip('\n'))
-    # Import list of Elijah quips
-    elijahList = []
-    with open("./static/text/elijahList.txt") as f:
-        for line in f:
-            elijahList.append(line.strip('\n'))
-
-    andrew = random.choice(andrewList)
-    elijah = random.choice(elijahList)
-    return render_template("about.html", andrew=andrew, elijah=elijah)
 
 @app.route('/moneyball/')
 def moneyball():
