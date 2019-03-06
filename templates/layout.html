@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -12,37 +13,53 @@ ga('send', 'pageview');
     </script>
     <head>
         <title>CyrusofChaos - NCAA Fencing Calculations</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
         <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     </head>
     <br>
     <body>
+
+
         <header>
-            <div class="container">
-                <h1 class="logo">FENCING MATH - NCAA Calculations</h1>
-                <strong><nav>
-                        <ul class="menu">
-                            <li><a href="{{ url_for('home') }}">Team</a></li>
-                            <li><a href="{{ url_for('individual') }}">Individual</a></li>
-                            <li><a href="{{ url_for('about') }}">About/Schedule</a></li>
-                            <li><a href="{{ url_for('moneyball') }}">Moneyball</a></li>
-                        </ul>
-                </nav></strong>
-            </div>
+            <nav class = "navbar navbar-expand-lg mobile" style="background-color:#{{color[1]}}">
+                <div class = "title">
+                    <span class = "math">Fencing Math</span>
+                    <span class = "desktop">- CyrusofChaos</span>
+                </div>
+                <div id = "weapon" class="dropdown" style="display:none; background-color:#{{color[1]}}">
+                        <button class="dropbtn">Weapon</button>
+                        <div class="dropdown-content">
+                            {% for weapon in fencers %}
+                            <a href="{{ url_for('individual') }}#{{weapons[loop.index - 1]}}">{{weapons[loop.index - 1]}}</a>
+                            {% endfor %} 
+                        </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn" style="background-color:#{{color[1]}}">Links</button>
+                    <div class="dropdown-content">
+                        <a href="{{ url_for('home') }}">Team</a>
+                        <a href="{{ url_for('individual') }}">Individual</a>
+                        <a href="{{ url_for('about') }}">About/Schedule</a>
+                        <!--<a href="{{ url_for('moneyball') }}">Moneyball</a>-->
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn" style="background-color:#{{color[1]}}">Media</button>
+                    <div class="dropdown-content">
+                        <a href="http://www.youtube.com/user/CyrusofChaos">YouTube</a>
+                        <a href="http://www.instagram.com/cyrusofchaos">Instagram</a>
+                        <a href="https://www.facebook.com/CyrusofChaos/">Facebook</a>
+                    </div>
+                </div>
+            </nav>
         </header>
-        <header>
+        <div class="ncaa-banner">
             <div class="container">
-                <h1 class="logo2">CyrusofChaos</h1>
-                <strong><nav>
-                        <ul class="menu2">
-                            <li><a href="http://www.youtube.com/user/CyrusofChaos">YouTube</a></li>
-                            <li><a href="https://www.facebook.com/CyrusofChaos/">Facebook</a></li>
-                            <li><a href="http://www.instagram.com/cyrusofchaos">Instagram</a></li>
-                        </ul>
-                </nav></strong>
+                <div class = "year_banner" style="color:#{{color[0]}}">{{year}} National Collegiate</div>
+                <div class = "championship_banner" style="color:#{{color[1]}}">Fencing Championships</div>
             </div>
-        </header>
-        <p class="banner" style="text-align:center;"><img src="{{url_for('static', filename='images/small/banner18.png')}}" width="90%" alt=""/></p>
+        </div>
         <div class="container">
             {%block content%}
             {%endblock%}
