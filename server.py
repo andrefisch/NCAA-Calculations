@@ -9,38 +9,40 @@ app = Flask(__name__)
 
 cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 
+default = "Default"
+
 @app.route('/')
 @cache.cached(timeout=150)
 def home():
     year = ResultService.year
+    colors = ResultService.get_school_colors()
     try:
         ranking, fencers, weapons = ResultService.get_current_results()
-        colors = ResultService.get_school_colors()
         return render_template("home.html", ranking=ranking, color=colors[ranking.first_place.name], year=year)
     except:
         print("Error loading HOME page")
         schools = ResultService.get_fencer_numbers()
-        return render_template("display.html", schools=schools, year=year)
+        return render_template("display.html", schools=schools, year=year, color=colors[default])
 
 @app.route('/individual/')
 @cache.cached(timeout=150)
 def individual():
     year = ResultService.year
+    colors = ResultService.get_school_colors()
     try:
         ranking, fencers, weapons = ResultService.get_current_results()
-        colors = ResultService.get_school_colors()
         return render_template("individual.html", fencers=fencers, weapons=weapons, color=colors[ranking.first_place.name], year=year)
     except:
         print("Error loading INDIVIDUAL page")
         schools = ResultService.get_fencer_numbers()
-        return render_template("display.html", schools=schools, year=year)
+        return render_template("display.html", schools=schools, year=year, color=colors[default])
 
 @app.route('/about/')
 def about():
     year = ResultService.year
+    colors = ResultService.get_school_colors()
     try:
-        ranking, fencers, weapons = ResultService.get_current_results()
-        colors = ResultService.get_school_colors()
+        # ranking, fencers, weapons = ResultService.get_current_results()
         # Import list of Andrew quips
         andrewList = []
         with open("./static/text/andrewList.txt") as f:
@@ -55,21 +57,21 @@ def about():
         andrew = random.choice(andrewList)
         elijah = random.choice(elijahList)
         # return render_template("about.html", andrew=andrew, elijah=elijah)
-        return render_template("about.html", color=colors[ranking.first_place.name], year=year, andrew=andrew, elijah=elijah)
+        return render_template("about.html", color=colors[default], year=year, andrew=andrew, elijah=elijah)
     except:
         print("Error loading ABOUT page")
         schools = ResultService.get_fencer_numbers()
-        return render_template("display.html", schools=schools, year=year)
+        return render_template("display.html", schools=schools, year=year, color=colors[default])
 
 @app.route('/moneyball/')
 def moneyball():
+    colors = ResultService.get_school_colors()
     try:
         ranking, fencers, weapons = ResultService.get_current_results()
-        colors = ResultService.get_school_colors()
         return render_template("moneyball.html", fencers=fencers, weapons=weapons, color=colors[ranking.first_place.name])
     except:
         schools = resultservice.get_fencer_numbers()
-        return render_template("display.html", schools=schools)
+        return render_template("display.html", schools=schools, color=colors[default])
 
 
 if __name__ == "__main__":

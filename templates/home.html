@@ -11,7 +11,7 @@
             <th BGCOLOR={{color[0]}}>Bouts to Clinch</th>
         </tr>
         <tr>
-            <td>1</td>
+            <td>1.</td>
             <td><img src="../static/images/small/{{ranking.first_place.school_logo}}"
                      alt=""
                      style="width:auto; height:50px;"><br>{{ranking.first_place.name}}<br> ({{ranking.first_place.num_fencers}})
@@ -42,7 +42,7 @@
         </tr>
         {% for school in ranking.trailing_schools %}
         <tr>
-            <td>{{loop.index + 1}}</td>
+            <td>{{loop.index + 1}}.</td>
             <td><img class = "schoollogo"
                      src="../static/images/small/{{school.school_logo}}"
                      alt=""

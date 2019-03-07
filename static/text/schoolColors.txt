@@ -1,3 +1,4 @@
+Default;3265AF;2D385B
 Columbia/Barnard;7FBEE7;005188
 Notre Dame;C89600;0C2340
 Ohio State University;666666;BB0000
