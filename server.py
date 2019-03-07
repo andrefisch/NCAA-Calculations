@@ -60,7 +60,7 @@ def about():
         if (int(year) % 2 == 0):
             order = ['women', 'men']
         return render_template("about.html", color=colors[default], year=year, order=order, andrew=andrew, elijah=elijah)
-    # except:
+    except:
         print("Error loading ABOUT page")
         schools = ResultService.get_fencer_numbers()
         return render_template("display.html", schools=schools, year=year, color=colors[default])
