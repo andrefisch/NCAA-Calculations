@@ -42,7 +42,6 @@ def about():
     year = ResultService.year
     colors = ResultService.get_school_colors()
     try:
-        # ranking, fencers, weapons = ResultService.get_current_results()
         # Import list of Andrew quips
         andrewList = []
         with open("./static/text/andrewList.txt") as f:
@@ -60,6 +59,20 @@ def about():
         if (int(year) % 2 == 0):
             order = ['women', 'men']
         return render_template("about.html", color=colors[default], year=year, order=order, andrew=andrew, elijah=elijah)
+    except:
+        print("Error loading ABOUT page")
+        schools = ResultService.get_fencer_numbers()
+        return render_template("display.html", schools=schools, year=year, color=colors[default])
+
+@app.route('/schedule/')
+def schedule():
+    year = ResultService.year
+    colors = ResultService.get_school_colors()
+    try:
+        order = ['Men', 'Women']
+        if (int(year) % 2 == 0):
+            order = ['Women', 'Men']
+        return render_template("schedule.html", color=colors[default], year=year, order=order)
     except:
         print("Error loading ABOUT page")
         schools = ResultService.get_fencer_numbers()
