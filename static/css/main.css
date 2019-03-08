@@ -19,6 +19,14 @@ body {
     top:45px;
 }
 
+p{
+    margin-top:1rem;
+}
+
+.schedule td, .schedule th{
+    text-align:left;
+}
+
 .ncaa-banner{
     font-family: ncaa-illinois, "Helvetica Neue", Helvetica, Arial, sans-serif; 
     font-weight: bold;
@@ -174,7 +182,7 @@ h2 {
 h3 {
     font-size: 1.7em;
     font-weight: 100;
-    margin-top: 30px;
+    margin-top: 3rem;
     text-align: center;
     letter-spacing: -1px;
     color: #2C385C;
@@ -200,8 +208,9 @@ h5 {
 }
 
 #demo {
-    font-size: 5em;
+    font-size: 2rem;
     text-align: center;
+    font-family: ncaa-illinois;
     color: black;
 }
 
@@ -320,7 +329,7 @@ h5 {
     background-color: #ddd;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content, .dropdown:active .dropdown-content {
     display: block;
 }
 

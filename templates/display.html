@@ -6,21 +6,21 @@
 <iframe class="display" width="940" height="526" src="https://www.youtube.com/embed/xYL8GFZCVls" allowfullscreen></iframe>
 <br>
 <br>
-<h3><b>Total Fencers Per School</b></span></h3>
-<table class="center about">
+<h3><b id="demo">Total Fencers Per School</b></span></h3>
+<table class="table" style="margin-top:50px; border:2px solid #{{color[1]}}">
     <tr>
-        <th class="green">Schools with 12 Fencers</th>
-        <th class="green"></th>
-        <th class="green">Number of Fencers</th>
-        <th class="green">Total Bouts</th>
+        <th style="background-color:#{{color[0]}}">Schools with 12 Fencers</th>
+        <th style="background-color:#{{color[0]}}"></th>
+        <th style="background-color:#{{color[0]}}">Number of Fencers</th>
+        <th style="background-color:#{{color[0]}}">Total Bouts</th>
     </tr>
     {% for school in schools %}
     {% if loop.index == 4 %}
     <tr>
-        <th class="green">Schools with less than 12 Fencers</th>
-        <th class="green"></th>
-        <th class="green">Number of Fencers</th>
-        <th class="green">Total Bouts</th>
+        <th style="background-color:#{{color[0]}}">Schools with less than 12 Fencers</th>
+        <th style="background-color:#{{color[0]}}"></th>
+        <th style="background-color:#{{color[0]}}">Number of Fencers</th>
+        <th style="background-color:#{{color[0]}}">Total Bouts</th>
     </tr>
     {% endif %}
     <tr>
@@ -59,7 +59,7 @@ var x = setInterval(function() {
     // If the count down is finished, write some text
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("demo").innerHTML = "NCAAs are underway; updates coming soon!";
+        document.getElementById("demo").innerHTML = "NCAAs are underway<br> updates coming soon!";
     }
 }, 1000);
 </script>
