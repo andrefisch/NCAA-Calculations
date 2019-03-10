@@ -302,6 +302,7 @@ h5 {
     font-size: 16px;
     border: none;
   }
+
   
 .dropdown {
     position: relative;
@@ -334,6 +335,11 @@ h5 {
 
 .dropdown:hover .dropbtn {
     filter: brightness(150%);
+}
+
+.dropbtn:focus{
+    outline:none;
+    outline:0;
 }
 
 .show{
