@@ -333,10 +333,6 @@ h5 {
 .dropdown:hover .dropdown-content, .dropdown:active .dropdown-content {
 }
 
-.dropdown:hover .dropbtn {
-    filter: brightness(150%);
-}
-
 .dropbtn:focus{
     outline:none;
     outline:0;
@@ -366,6 +362,10 @@ h5 {
 h5{
     padding-top:50px;
     font-size: 3em;
+}
+
+.dropdown:hover .dropbtn {
+    filter: brightness(150%);
 }
 
 @media only screen and (max-width: 600px) {
@@ -398,6 +398,10 @@ h5{
 
     .ncaa-banner{
         font-size:1.2em;
+    }
+
+    .dropdown:hover .dropbtn {
+        filter: brightness(100%);
     }
 
   }
