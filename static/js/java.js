@@ -1,4 +1,7 @@
-window.onclick = function(event) {
+window.addEventListener('touchstart', hideAllDropdowns)
+window.addEventListener('click', hideAllDropdowns)
+
+function hideAllDropdowns(event) {
     if (!event.target.matches('.dropbtn')) {
       var dropdowns = document.getElementsByClassName("dropdown-content");
       var i;
