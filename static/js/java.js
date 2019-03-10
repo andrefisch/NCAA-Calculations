@@ -20,6 +20,7 @@ function hideAllDropdowns(event) {
       }
     }
     */
+   alert('you clicked the screen')
 
     if (!event.target.matches('.dropbtn')) {
     weapon = document.getElementById("weapon")
