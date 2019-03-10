@@ -1,3 +1,4 @@
+
 window.addEventListener('touchstart', hideAllDropdowns)
 window.addEventListener('click', hideAllDropdowns)
 
