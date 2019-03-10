@@ -1,9 +1,15 @@
 
+
 window.addEventListener('ontouchstart', hideAllDropdowns)
+window.addEventListener('touchstart', hideAllDropdowns, false);
 window.addEventListener('click', hideAllDropdowns)
 
+
 function hideAllDropdowns(event) {
+
+  /*
     if (!event.target.matches('.dropbtn')) {
+
       var dropdowns = document.getElementsByClassName("dropdown-content");
       var i;
       for (i = 0; i < dropdowns.length; i++) {
@@ -13,57 +19,70 @@ function hideAllDropdowns(event) {
         }
       }
     }
+    */
+
+    if (!event.target.matches('.dropbtn')) {
+    weapon = document.getElementById("weapon")
+    linksnav = document.getElementById("linksnav")
+    medianav = document.getElementById("medianav") 
+
+
+    hideDropdown(weapon);
+    hideDropdown(linksnav);
+    hideDropdown(medianav);
+    }
   }
   
   function hideDropdown(menuid){
   
       
   
-      var dropdown = menuid.getElementsByTagName('div')[0];
-      if (dropdown.classList.contains('show')){
-          dropdown.classList.remove('show'); 
-      }
+    var dropdown = menuid.getElementsByTagName('div')[0];
+    if (dropdown.classList.contains('show')){
+        dropdown.classList.remove('show'); 
+    }
+  
   
   }
   
-    function displayWeapon() {
+  function displayWeapon() {
   
-      weapon = document.getElementById("weapon")
-      linksnav = document.getElementById("linksnav")
-      medianav = document.getElementById("medianav")
-  
-      hideDropdown(linksnav);
-      hideDropdown(medianav);
-  
-      weapon.getElementsByTagName('div')[0].classList.toggle("show");
-      document.activeElement.blur()
+    weapon = document.getElementById("weapon")
+    linksnav = document.getElementById("linksnav")
+    medianav = document.getElementById("medianav")
+
+    hideDropdown(linksnav);
+    hideDropdown(medianav);
+
+    weapon.getElementsByTagName('div')[0].classList.toggle("show");
+    document.activeElement.blur()
   }
   
-    function displayLinksnav() {
+  function displayLinksnav() {
   
-      weapon = document.getElementById("weapon")
-      linksnav = document.getElementById("linksnav")
-      medianav = document.getElementById("medianav")
-  
-      hideDropdown(weapon);
-      hideDropdown(medianav);
-      
-      linksnav.getElementsByTagName('div')[0].classList.toggle("show");
-      document.activeElement.blur()
+    weapon = document.getElementById("weapon")
+    linksnav = document.getElementById("linksnav")
+    medianav = document.getElementById("medianav")
+
+    hideDropdown(weapon);
+    hideDropdown(medianav);
+    
+    linksnav.getElementsByTagName('div')[0].classList.toggle("show");
+    document.activeElement.blur()
   }
   
   
-    function displayMedianav() {
+  function displayMedianav() {
   
-      weapon = document.getElementById("weapon")
-      linksnav = document.getElementById("linksnav")
-      medianav = document.getElementById("medianav")
+    weapon = document.getElementById("weapon")
+    linksnav = document.getElementById("linksnav")
+    medianav = document.getElementById("medianav")
+
+    hideDropdown(weapon);
+    hideDropdown(linksnav);
   
-      hideDropdown(weapon);
-      hideDropdown(linksnav);
-     
-      medianav.getElementsByTagName('div')[0].classList.toggle("show");
-      document.activeElement.blur()
+    medianav.getElementsByTagName('div')[0].classList.toggle("show");
+    document.activeElement.blur()
   }
   
   
