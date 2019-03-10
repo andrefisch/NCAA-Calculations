@@ -1,5 +1,5 @@
 
-window.addEventListener('touchstart', hideAllDropdowns)
+window.addEventListener('ontouchstart', hideAllDropdowns)
 window.addEventListener('click', hideAllDropdowns)
 
 function hideAllDropdowns(event) {
