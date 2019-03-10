@@ -25,29 +25,52 @@
   }
 }
 
-function hideAllDropdowns(){
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
+function hideDropdown(menuid){
+
+    
+
+    var dropdown = menuid.getElementsByTagName('div')[0];
+    if (dropdown.classList.contains('show')){
+        dropdown.classList.remove('show'); 
     }
+
 }
 
   function displayWeapon() {
 
-    hideAllDropdowns();
-    document.getElementById("weapon").getElementsByTagName('div')[0].classList.toggle("show");
+    weapon = document.getElementById("weapon")
+    linksnav = document.getElementById("linksnav")
+    medianav = document.getElementById("medianav")
+
+    hideDropdown(linksnav);
+    hideDropdown(medianav);
+
+    weapon.getElementsByTagName('div')[0].classList.toggle("show");
 }
+
   function displayLinksnav() {
-    hideAllDropdowns();
-    document.getElementById("linksnav").getElementsByTagName('div')[0].classList.toggle("show");
+
+    weapon = document.getElementById("weapon")
+    linksnav = document.getElementById("linksnav")
+    medianav = document.getElementById("medianav")
+
+    hideDropdown(weapon);
+    hideDropdown(medianav);
+    
+    linksnav.getElementsByTagName('div')[0].classList.toggle("show");
 }
+
+
   function displayMedianav() {
-    hideAllDropdowns();
-    document.getElementById("medianav").getElementsByTagName('div')[0].classList.toggle("show");
+
+    weapon = document.getElementById("weapon")
+    linksnav = document.getElementById("linksnav")
+    medianav = document.getElementById("medianav")
+
+    hideDropdown(weapon);
+    hideDropdown(linksnav);
+   
+    medianav.getElementsByTagName('div')[0].classList.toggle("show");
 }
 
 
