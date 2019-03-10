@@ -5,7 +5,7 @@ window.addEventListener('touchstart', hideAllDropdowns, false);
 window.addEventListener('click', hideAllDropdowns)*/
 
 
-function hideAllDropdowns(event) {
+function hideAllDropdowns() {
 
   /*
     if (!event.target.matches('.dropbtn')) {
@@ -22,6 +22,7 @@ function hideAllDropdowns(event) {
     */
    alert('you clicked the screen')
 
+   /*
     if (!event.target.matches('.dropbtn')) {
     weapon = document.getElementById("weapon")
     linksnav = document.getElementById("linksnav")
@@ -31,7 +32,9 @@ function hideAllDropdowns(event) {
     hideDropdown(weapon);
     hideDropdown(linksnav);
     hideDropdown(medianav);
+    
     }
+    */
   }
   
   function hideDropdown(menuid){
