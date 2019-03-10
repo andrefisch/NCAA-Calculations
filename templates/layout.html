@@ -46,6 +46,7 @@ function hideDropdown(menuid){
     hideDropdown(medianav);
 
     weapon.getElementsByTagName('div')[0].classList.toggle("show");
+    document.activeElement.blur()
 }
 
   function displayLinksnav() {
@@ -58,6 +59,7 @@ function hideDropdown(menuid){
     hideDropdown(medianav);
     
     linksnav.getElementsByTagName('div')[0].classList.toggle("show");
+    document.activeElement.blur()
 }
 
 
@@ -71,6 +73,7 @@ function hideDropdown(menuid){
     hideDropdown(linksnav);
    
     medianav.getElementsByTagName('div')[0].classList.toggle("show");
+    document.activeElement.blur()
 }
 
 
