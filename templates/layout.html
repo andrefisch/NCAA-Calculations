@@ -11,36 +11,46 @@
         ga('send', 'pageview');
 
 
-        function toggle_dropdown(dropdowns){
-           hide_dropdown(dropdowns);
-           reset_dropdown(dropdowns);
-            
-            
-        }
-
-        function hide_dropdown(dropdowns){
-            var i;
-            console.log("hiding")
-            for (i = 0; i < dropdowns.length; i++) {
-                    dropdowns[i].style.display = "none";
-                }
-        }
-
-        function reset_dropdown(dropdowns){
-            var i;
-            console.log("resetting")
-            for (i = 0; i < dropdowns.length; i++) {
-                    dropdowns[i].style.display = "";
-                    
-                }
-        }
 
         window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                toggle_dropdown(dropdowns);
-            }
-         }
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+function hideAllDropdowns(){
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+}
+
+  function displayWeapon() {
+
+    hideAllDropdowns();
+    document.getElementById("weapon").getElementsByTagName('div')[0].classList.toggle("show");
+}
+  function displayLinksnav() {
+    hideAllDropdowns();
+    document.getElementById("linksnav").getElementsByTagName('div')[0].classList.toggle("show");
+}
+  function displayMedianav() {
+    hideAllDropdowns();
+    document.getElementById("medianav").getElementsByTagName('div')[0].classList.toggle("show");
+}
+
+
 
 
 
@@ -62,15 +72,15 @@
                     <span class = "math">Fencing Math</span>
                 </div>
                 <div id = "weapon" class="dropdown" style="display:none; background-color:#{{color[1]}}">
-                        <button class="dropbtn">Weapon</button>
+                        <button class="dropbtn" onclick="displayWeapon()">Weapon</button>
                         <div class="dropdown-content">
                             {% for weapon in fencers %}
                             <a href="{{ url_for('individual') }}#{{weapons[loop.index - 1]}}">{{weapons[loop.index - 1]}}</a>
                             {% endfor %} 
                         </div>
                 </div>
-                <div class="dropdown">
-                    <button class="dropbtn" style="background-color:#{{color[1]}}">Links</button>
+                <div id = "linksnav" class="dropdown">
+                    <button class="dropbtn" onclick="displayLinksnav()" style="background-color:#{{color[1]}}">Links</button>
                     <div class="dropdown-content">
                         <a href="{{ url_for('home') }}">Team</a>
                         <a href="{{ url_for('individual') }}">Individual</a>
@@ -79,8 +89,8 @@
                         <!--<a href="{{ url_for('moneyball') }}">Moneyball</a>-->
                     </div>
                 </div>
-                <div class="dropdown">
-                    <button class="dropbtn" style="background-color:#{{color[1]}}">Media</button>
+                <div id = "medianav" class="dropdown">
+                    <button class="dropbtn" onclick="displayMedianav()" style="background-color:#{{color[1]}}">Media</button>
                     <div class="dropdown-content">
                         <a href="http://www.youtube.com/user/CyrusofChaos">YouTube</a>
                         <a href="http://www.instagram.com/cyrusofchaos">Instagram</a>

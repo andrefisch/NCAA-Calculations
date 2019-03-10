@@ -330,11 +330,14 @@ h5 {
 }
 
 .dropdown:hover .dropdown-content, .dropdown:active .dropdown-content {
-    display: block;
 }
 
 .dropdown:hover .dropbtn {
     filter: brightness(150%);
+}
+
+.show{
+    display:block;
 }
 
 .title{
