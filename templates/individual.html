@@ -33,7 +33,8 @@
     {% endif %}
     <tr>
         <td>{{loop.index}}.</td>
-        <td><img src="../static/images/small/{{fencer.school_logo}}"
+        <td><img class="lazy"
+                 data-src="../static/images/small/{{fencer.school_logo}}"
                  alt=""
                  style="width:auto; height:50px;"> <br>{{fencer.name}}</td>
         <td>{{fencer.wins}}/{{fencer.bouts_fenced}}</td>

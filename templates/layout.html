@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/java.js') }}"></script>
+<script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -12,72 +13,7 @@
 
 
 
-        window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-
-function hideDropdown(menuid){
-
-    
-
-    var dropdown = menuid.getElementsByTagName('div')[0];
-    if (dropdown.classList.contains('show')){
-        dropdown.classList.remove('show'); 
-    }
-
-}
-
-  function displayWeapon() {
-
-    weapon = document.getElementById("weapon")
-    linksnav = document.getElementById("linksnav")
-    medianav = document.getElementById("medianav")
-
-    hideDropdown(linksnav);
-    hideDropdown(medianav);
-
-    weapon.getElementsByTagName('div')[0].classList.toggle("show");
-    document.activeElement.blur()
-}
-
-  function displayLinksnav() {
-
-    weapon = document.getElementById("weapon")
-    linksnav = document.getElementById("linksnav")
-    medianav = document.getElementById("medianav")
-
-    hideDropdown(weapon);
-    hideDropdown(medianav);
-    
-    linksnav.getElementsByTagName('div')[0].classList.toggle("show");
-    document.activeElement.blur()
-}
-
-
-  function displayMedianav() {
-
-    weapon = document.getElementById("weapon")
-    linksnav = document.getElementById("linksnav")
-    medianav = document.getElementById("medianav")
-
-    hideDropdown(weapon);
-    hideDropdown(linksnav);
-   
-    medianav.getElementsByTagName('div')[0].classList.toggle("show");
-    document.activeElement.blur()
-}
-
-
-
+  
 
 
     </script>
