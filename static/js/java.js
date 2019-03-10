@@ -1,11 +1,9 @@
 
-/*
-window.addEventListener('ontouchstart', hideAllDropdowns)
-window.addEventListener('touchstart', hideAllDropdowns, false);
-window.addEventListener('click', hideAllDropdowns)*/
+
+document.addEventListener('click', hideAllDropdowns)
 
 
-function hideAllDropdowns() {
+function hideAllDropdowns(event) {
 
   /*
     if (!event.target.matches('.dropbtn')) {
@@ -20,9 +18,7 @@ function hideAllDropdowns() {
       }
     }
     */
-   alert('you clicked the screen')
-
-   /*
+   
     if (!event.target.matches('.dropbtn')) {
     weapon = document.getElementById("weapon")
     linksnav = document.getElementById("linksnav")
@@ -34,7 +30,7 @@ function hideAllDropdowns() {
     hideDropdown(medianav);
     
     }
-    */
+    
   }
   
   function hideDropdown(menuid){
