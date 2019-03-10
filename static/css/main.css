@@ -368,6 +368,14 @@ h5{
     filter: brightness(150%);
 }
 
+@media only screen and (max-width: 1030px){
+
+    body{
+        cursor:pointer;
+    }
+
+}
+
 @media only screen and (max-width: 600px) {
     .table th, .table td{
         font-size:0.7rem;
