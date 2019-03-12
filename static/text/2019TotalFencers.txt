@@ -1,0 +1,59 @@
+Columbia/Barnard;12
+Barnard College;12
+University of Notre Dame;12
+Notre Dame;12
+Harvard University;12
+Harvard;12
+Pennsylvania State University;12
+Penn State;12
+Duke University;10
+Duke;10
+St. John's University;10
+St. Johns University;10
+St. John's;10
+St. Johns;10
+Yale University;10
+Yale;10
+Ohio State University;9
+Ohio State;9
+University of Pennsylvania;7
+Pennsylvania, University of;7
+Pennsylvania;7
+Princeton University;6
+Princeton;6
+Stanford University;6
+Stanford;6
+New York University;5
+N.Y.U.;5
+NYU;5
+U.C. San Diego;5
+UC San Diego;5
+UCSD;5
+Northwestern University;5
+Northwestern;5
+U.S. Air Force Academy;3
+Air Force Academy;3
+Air Force;3
+UNC, Chapel Hill;3
+North Carolina;3
+Temple University;3
+Temple;3
+Cornell University;3
+Cornell;3
+Incarnate Word, University of the;3
+Incarnate Word;3
+Wayne State University;2
+Wayne State;2
+Brown University;1
+Brown;1
+Brown College;1
+Boston College;1
+Fairleigh Dickinson University;1
+Fairleigh Dickinson;1
+Stevens College;1
+Stevens;1
+University of Detroit Mercy;1
+Detroit Mercy;1
+New Jersey Institute of Technology;1
+NJ Institute of Technology;1
+NJIT;1

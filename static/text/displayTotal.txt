@@ -1,27 +1,26 @@
-Columbia/Barnard;12
+Penn State;12
 Notre Dame;12
-Ohio State;12
-Harvard;10
-Penn State;10
-Pennsylvania;10
-Princeton;9
-St. John's;9
-Stanford;9
-Yale;8
-Duke;7
-New York University;6
-U.C. San Diego;5
-Air Force;4
-Northwestern;4
-N.J.I.T.;3
+Harvard;12
+Columbia;12
+Yale;10
+St. John's (New York);10
+Duke;10
+Ohio State;9
+Pennsylvania;7
+Stanford;6
+Princeton;6
+UC San Diego;5
+Northwestern;5
+New York University;5
 Temple;3
-Cornell;2
-University of the Incarnate Word;2
+North Carolina;3
+Incarnate Word;3
+Cornell;3
+Air Force;3
 Wayne State;2
-Boston College;1
-Brown;1
+Stevens;1
+New Jersey Institute;1
 Fairleigh Dickinson;1
-Johns Hopkins;1
-M.I.T.;1
-North Carolina;1
-Sacred Heart;1
+Detroit Mercy;1
+Brown;1
+Boston College;1

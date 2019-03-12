@@ -26,8 +26,10 @@ year = ""
 # url = "http://web.archive.org/web/20160325002832/http://www.escrimeresults.com/NCAA/NCAA2016.html"
 # 2017 WORKS
 # url = "https://escrimeresults.com/NCAA/ncaa2017.html"
-# 2018 WE WILL SEE
-url = "https://escrimeresults.com/NCAA/ncaa2018.html"
+# 2018 WORKS
+# url = "https://escrimeresults.com/NCAA/ncaa2018.html"
+# We will see!
+url = "https://escrimeresults.com/NCAA/ncaa2019.html"
 
 # year = url[36:40]
 year = url[-9:-5]
@@ -103,7 +105,8 @@ def _get_school_fencers_map():
 
     # with open("./static/text/2016TotalFencers.txt") as f:
     # with open("./static/text/2017TotalFencers.txt") as f:
-    with open("./static/text/2018TotalFencers.txt") as f:
+    # with open("./static/text/2018TotalFencers.txt") as f:
+    with open("./static/text/2019TotalFencers.txt") as f:
         for line in f:
             (key, val) = line.strip('\n').split(";")
             school_fencers_map[key] = val
