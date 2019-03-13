@@ -22,7 +22,7 @@ def home():
     except:
         print("Error loading HOME page")
         schools = ResultService.get_fencer_numbers()
-        return render_template("display.html", schools=schools, year=year, color=colors[default])
+        return render_template("display.html", schools=schools, weapons=weapons, year=year, color=colors[default])
 
 @app.route('/individual/')
 @cache.cached(timeout=150)
@@ -34,8 +34,9 @@ def individual():
         return render_template("individual.html", fencers=fencers, weapons=weapons, color=colors[ranking.first_place.name], year=year)
     except:
         print("Error loading INDIVIDUAL page")
+        weapons = ["Total Fencers", "Men's Epee", "Men's Foil", "Men's Sabre", "Women's Epee", "Women's Foil", "Women's Sabre"]
         schools = ResultService.get_fencer_numbers()
-        return render_template("display.html", schools=schools, year=year, color=colors[default])
+        return render_template("display.html", schools=schools, weapons=weapons, year=year, color=colors[default])
 
 @app.route('/about/')
 def about():
@@ -62,7 +63,8 @@ def about():
     except:
         print("Error loading ABOUT page")
         schools = ResultService.get_fencer_numbers()
-        return render_template("display.html", schools=schools, year=year, color=colors[default])
+        weapons = ["Total Fencers", "Men's Epee", "Men's Foil", "Men's Sabre", "Women's Epee", "Women's Foil", "Women's Sabre"]
+        return render_template("display.html", schools=schools, weapons=weapons, year=year, color=colors[default])
 
 @app.route('/schedule/')
 def schedule():
@@ -76,17 +78,20 @@ def schedule():
     except:
         print("Error loading ABOUT page")
         schools = ResultService.get_fencer_numbers()
-        return render_template("display.html", schools=schools, year=year, color=colors[default])
+        weapons = ["Total Fencers", "Men's Epee", "Men's Foil", "Men's Sabre", "Women's Epee", "Women's Foil", "Women's Sabre"]
+        return render_template("display.html", schools=schools, weapons=weapons, year=year, color=colors[default])
 
 @app.route('/moneyball/')
 def moneyball():
+    year = ResultService.year
     colors = ResultService.get_school_colors()
     try:
         ranking, fencers, weapons = ResultService.get_current_results()
         return render_template("moneyball.html", fencers=fencers, weapons=weapons, color=colors[ranking.first_place.name])
     except:
         schools = resultservice.get_fencer_numbers()
-        return render_template("display.html", schools=schools, color=colors[default])
+        weapons = ["Total Fencers", "Men's Epee", "Men's Foil", "Men's Sabre", "Women's Epee", "Women's Foil", "Women's Sabre"]
+        return render_template("display.html", schools=schools, weapons=weapons, year=year, color=colors[default])
 
 
 if __name__ == "__main__":

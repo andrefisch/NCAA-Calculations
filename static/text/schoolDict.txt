@@ -15,6 +15,7 @@ Fairleigh Dcknsn;FDU
 Fairleigh Dickinson;FDU
 Harvard University;HARV
 Harvard;HARV
+Incarnate Word;UIW
 Incarnate Word, University of the;UIW
 John's Hopkins University;JHU
 John's Hopkins;JHU
@@ -45,11 +46,17 @@ Princeton;PRIN
 Sacred Heart University;SACR
 Sacred Heart;SACR
 St. John's University;STJ
+St. John's (New York);STJ
 St. John's;STJ
 Stanford University;STAN
 Stanford;STAN
+Stevens;STEV
+Steven's;STEV
+Stevens College;STEV
+Steven's College;STEV
 Temple University;TEMP
 Temple;TEMP
+UC San Diego;UCSD
 U.C. San Diego;UCSD
 U.I.W.;UIW
 U.S. Air Force Academy;USAF
