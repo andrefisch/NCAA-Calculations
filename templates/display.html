@@ -17,6 +17,7 @@
 <!--<iframe class="display" width="940" height="526" src="https://www.youtube.com/embed/xYL8GFZCVls" allowfullscreen></iframe>-->
 <br>
 <br>
+<h3 id="demo">Click the weapon tab in the upper right of the screen to see the qualifiers for the championship!</h3>
 <h5 id="Total Fencers"><b>Total Fencers Per School</b>></h5>
 <table class="table" style="margin-top:50px; border:2px solid #{{color[1]}}">
     <tr>
@@ -1703,7 +1704,7 @@
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Display the result in the element with id="demo"
-        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+        document.getElementById("demo").innerHTML = "Countdown to NCAAs:<br>" + days + "d " + hours + "h "
             + minutes + "m " + seconds + "s ";
 
         // If the count down is finished, write some text
