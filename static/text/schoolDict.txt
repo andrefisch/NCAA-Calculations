@@ -52,8 +52,8 @@ Stanford University;STAN
 Stanford;STAN
 Stevens;STEV
 Steven's;STEV
-Stevens College;STEV
-Steven's College;STEV
+Stevens Institute of Technology;STEV
+Steven's Institute of Technology;STEV
 Temple University;TEMP
 Temple;TEMP
 UC San Diego;UCSD

@@ -3,7 +3,7 @@ Notre Dame;12
 Harvard;12
 Columbia;12
 Yale;10
-St. John's (New York);10
+St. John's University;10
 Duke;10
 Ohio State;9
 Pennsylvania;7
@@ -18,7 +18,7 @@ Incarnate Word;3
 Cornell;3
 Air Force;3
 Wayne State;2
-Stevens NO LOGO YET;1
+Stevens Institute of Technology;1
 New Jersey Institute of Technology;1
 Fairleigh Dickinson;1
 Detroit Mercy;1
