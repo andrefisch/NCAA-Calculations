@@ -21,6 +21,7 @@ def home():
         return render_template("home.html", ranking=ranking, color=colors[ranking.first_place.name], year=year)
     except:
         print("Error loading HOME page")
+        weapons = ["Total Fencers", "Men's Epee", "Men's Foil", "Men's Sabre", "Women's Epee", "Women's Foil", "Women's Sabre"]
         schools = ResultService.get_fencer_numbers()
         return render_template("display.html", schools=schools, weapons=weapons, year=year, color=colors[default])
 
