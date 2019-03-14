@@ -5,13 +5,13 @@ Columbia;12
 Yale;10
 St. John's University;10
 Duke;10
-Ohio State;9
+Ohio State;10
 Pennsylvania;7
 Stanford;6
 Princeton;6
 UC San Diego;5
 Northwestern;5
-New York University;5
+New York University;4
 Temple;3
 North Carolina;3
 Incarnate Word;3
