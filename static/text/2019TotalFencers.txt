@@ -4,10 +4,10 @@ University of Notre Dame;12
 Notre Dame;12
 Harvard University;12
 Harvard;12
-Ohio State University;12
-Ohio State;12
 Pennsylvania State University;12
 Penn State;12
+Ohio State University;10
+Ohio State;10
 Duke University;10
 Duke;10
 St. John's University;10
