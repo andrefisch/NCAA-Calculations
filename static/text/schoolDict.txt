@@ -52,6 +52,7 @@ Stanford University;STAN
 Stanford;STAN
 Stevens;STEV
 Steven's;STEV
+Stevens Tech;STEV
 Stevens Institute of Technology;STEV
 Steven's Institute of Technology;STEV
 Temple University;TEMP

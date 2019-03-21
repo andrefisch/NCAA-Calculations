@@ -4,6 +4,8 @@ University of Notre Dame;12
 Notre Dame;12
 Harvard University;12
 Harvard;12
+Ohio State University;12
+Ohio State;12
 Pennsylvania State University;12
 Penn State;12
 Duke University;10
@@ -14,8 +16,6 @@ St. John's;10
 St. Johns;10
 Yale University;10
 Yale;10
-Ohio State University;9
-Ohio State;9
 University of Pennsylvania;7
 Pennsylvania, University of;7
 Pennsylvania;7
@@ -51,6 +51,7 @@ Boston College;1
 Fairleigh Dickinson University;1
 Fairleigh Dickinson;1
 Stevens College;1
+Stevens Tech;1
 Stevens;1
 University of Detroit Mercy;1
 Detroit Mercy;1
