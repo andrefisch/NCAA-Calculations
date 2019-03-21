@@ -40,6 +40,7 @@ Temple University;3
 Temple;3
 Cornell University;3
 Cornell;3
+University of the Incarnate Word;3
 Incarnate Word, University of the;3
 Incarnate Word;3
 Wayne State University;2
