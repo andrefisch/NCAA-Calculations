@@ -44,12 +44,20 @@
         {% for school in ranking.trailing_schools %}
         <tr>
             <td>{{loop.index + 1}}.</td>
+            {% if loop.index < 5 %}
+            <td><img class = "schoollogo"
+                     data-src="../static/images/smaller/{{school.school_logo}}"
+                     alt=""
+                     style="width:auto; height:50px;"><br>
+                     {{school.name}}<br> ({{school.num_fencers}})
+            {% else %}
             <td><img class = "schoollogo lazy"
                      data-src="../static/images/smaller/{{school.school_logo}}"
                      alt=""
                      style="width:auto; height:50px;"><br>
                      {{school.name}}<br> ({{school.num_fencers}})
             </td>
+            {% endif %}
             <td>{{school.wins}}</td>
             <!--<td class="desktop">{{school.win_percent}}</td>-->
 
