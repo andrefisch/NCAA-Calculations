@@ -12,10 +12,10 @@
         </tr>
         <tr>
             <td>1.</td>
-            <td><img class="schoollogo lazy" 
-                    data-src="../static/images/smaller/{{ranking.first_place.school_logo}}"
-                     alt=""
-                     style="width:auto; height:50px;"><br>{{ranking.first_place.name}}<br> ({{ranking.first_place.num_fencers}})
+            <td><img class="schoollogo" 
+                    src="../static/images/smaller/{{ranking.first_place.school_logo}}"
+                    alt=""
+                    style="width:auto; height:50px;"><br>{{ranking.first_place.name}}<br>({{ranking.first_place.num_fencers}})
                 </td>
             <td>{{ranking.first_place.wins}}</td>
             <!--<td class="desktop">{{ranking.first_place.win_percent}}</td>-->
@@ -44,18 +44,18 @@
         {% for school in ranking.trailing_schools %}
         <tr>
             <td>{{loop.index + 1}}.</td>
-            {% if loop.index < 5 %}
-            <td><img class = "schoollogo"
-                     data-src="../static/images/smaller/{{school.school_logo}}"
-                     alt=""
-                     style="width:auto; height:50px;"><br>
-                     {{school.name}}<br> ({{school.num_fencers}})
+            {% if loop.index < 6 %}
+            <td><img class = "schoollogo"                   
+                    src="../static/images/smaller/{{school.school_logo}}"
+                    alt=""
+                    style="width:auto; height:50px;"><br>{{school.name}}<br> ({{school.num_fencers}})
+            </td>
             {% else %}
             <td><img class = "schoollogo lazy"
-                     data-src="../static/images/smaller/{{school.school_logo}}"
-                     alt=""
-                     style="width:auto; height:50px;"><br>
-                     {{school.name}}<br> ({{school.num_fencers}})
+                    data-src="../static/images/smaller/{{school.school_logo}}"
+                    alt=""
+                    style="width:auto; height:50px;"><br>
+                    {{school.name}}<br> ({{school.num_fencers}})
             </td>
             {% endif %}
             <td>{{school.wins}}</td>

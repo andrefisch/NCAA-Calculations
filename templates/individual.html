@@ -11,7 +11,7 @@
 </style>
 
 {% for weapon in fencers %}
-
+{% set outer_loop = loop %}
 <h5 id = "{{weapons[loop.index - 1]}}" style="color:#{{color[1]}}"><b>{{weapons[loop.index - 1].upper()}}</b></h5>
 <table class="table" style="border:2px solid #{{color[1]}}">
     <tr>
@@ -33,10 +33,17 @@
     {% endif %}
     <tr>
         <td>{{loop.index}}.</td>
-        <td><img class="lazy"
+        {% if loop.index < 7 and outer_loop.index == 1 %}
+        <td><img class="schoollogo"
+                 src="../static/images/smaller/{{fencer.school_logo}}"
+                 alt=""
+                 style="width:auto; height:50px;"> <br>{{fencer.name}}</td>
+        {% else %}
+        <td><img class="schoollogo lazy"
                  data-src="../static/images/smaller/{{fencer.school_logo}}"
                  alt=""
                  style="width:auto; height:50px;"> <br>{{fencer.name}}</td>
+        {% endif %}
         <td>{{fencer.wins}}/{{fencer.bouts_fenced}}</td>
         <td class="desktop">{{fencer.win_percent}} ({{fencer.indicator}})</td>
 
