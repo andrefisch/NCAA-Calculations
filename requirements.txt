@@ -14,7 +14,7 @@ pandas==0.19.2
 pathtools==0.1.2
 python-dateutil==2.6.0
 pytz==2017.2
-PyYAML==3.12
+PyYAML==5.1
 requests==2.9.1
 six==1.10.0
 watchdog==0.8.3
