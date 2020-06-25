@@ -18,7 +18,7 @@ import pandas
 import operator
 import random
 
-import scraping_service as ScrapingService
+import src.scraping_service as ScrapingService
 
 year = ""
 

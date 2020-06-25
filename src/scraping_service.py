@@ -1,6 +1,6 @@
-from school import School
-from fencer import Fencer
-from ranking import Ranking
+from src.school import School
+from src.fencer import Fencer
+from src.ranking import Ranking
 
 
 SCHOOL_COLUMN = 2
